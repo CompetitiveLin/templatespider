@@ -1,0 +1,35 @@
+Date: Thu, 30 Dec 2021 02:13:42 GMT
+Content-Type: text/html; charset=utf-8
+X-Sorting-Hat-Podid: 88
+X-Sorting-Hat-Shopid: 5076746329
+X-Storefront-Renderer-Rendered: 1
+Set-Cookie: secure_customer_sig=; path=/; expires=Fri, 30 Dec 2022 02:13:42 GMT; secure; HttpOnly
+Set-Cookie: _y=9dcbce1f-732c-4944-b8d2-5d3ee83354ca; Expires=Fri, 30-Dec-22 02:13:42 GMT; Domain=standarddose.com; Path=/; SameSite=Lax
+Set-Cookie: _s=933a550e-60cc-4cd5-9822-75d918c5f56a; Expires=Thu, 30-Dec-21 02:43:42 GMT; Domain=standarddose.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_y=9dcbce1f-732c-4944-b8d2-5d3ee83354ca; Expires=Fri, 30-Dec-22 02:13:42 GMT; Domain=standarddose.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_s=933a550e-60cc-4cd5-9822-75d918c5f56a; Expires=Thu, 30-Dec-21 02:43:42 GMT; Domain=standarddose.com; Path=/; SameSite=Lax
+Link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; rel=preconnect; crossorigin
+Etag: cacheable:454334786ee2a162e7094489bf0dab17
+X-Alternate-Cache-Key: cacheable:4aa9730aec55e1250fbb59622ecc665e
+Content-Encoding: gzip
+X-Cache: miss
+X-Frame-Options: DENY
+Content-Security-Policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=7889238
+X-Shopid: 5076746329
+X-Shardid: 88
+Vary: Accept
+Content-Language: en
+X-Shopify-Stage: production
+X-Dc: gcp-us-central1,gcp-us-central1,gcp-us-central1
+X-Request-Id: 745c05c1-81e1-4848-82a5-0e9187abc7ac
+X-Permitted-Cross-Domain-Policies: none
+X-Xss-Protection: 1; mode=block
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 6c57c01ccdbb7d64-LAX
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400

@@ -1,0 +1,13 @@
+Date: Thu, 06 Jan 2022 08:12:33 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Set-Cookie: bellesa_flags=e30%3D; Path=/; Expires=Fri, 07 Jan 2022 08:12:33 GMT
+Set-Cookie: bellesa_authentication=s%3ANwDYmFITANcPLqmWI1URmmBtZOK5L_uK.Au7dxPa1hnJ2ADJGkj4jteku29L7eckJGxZ1F%2FxZZK4; Path=/; Expires=Thu, 06 Jan 2022 09:12:33 GMT; HttpOnly; Secure
+Cache-Control: max-age=0
+Expires: Thu, 06 Jan 2022 08:12:33 GMT
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server: cloudflare
+Cf-Ray: 6c937b624e3c7dd2-LAX
+Content-Encoding: gzip

@@ -1,0 +1,39 @@
+Date: Thu, 30 Dec 2021 03:33:13 GMT
+Content-Type: text/html; charset=utf-8
+X-Sorting-Hat-Podid: 170
+X-Sorting-Hat-Shopid: 26744062123
+X-Storefront-Renderer-Rendered: 1
+Set-Cookie: secure_customer_sig=; path=/; expires=Fri, 30 Dec 2022 03:33:13 GMT; secure; HttpOnly
+Set-Cookie: localization=US; path=/; expires=Thu, 13 Jan 2022 03:33:13 GMT
+Set-Cookie: _shopify_country=United+States; path=/; expires=Thu, 30 Dec 2021 04:03:13 GMT
+Set-Cookie: cart_currency=USD; path=/; expires=Thu, 13 Jan 2022 03:33:13 GMT
+Set-Cookie: _orig_referrer=https%3A%2F%2Fwww.valuepetsupplies.com%2Fcollections%2Fall-products%3Fpage%3D2; Expires=Thu, 13-Jan-22 03:33:13 GMT; Domain=valuepetsupplies.com; Path=/; HttpOnly; SameSite=Lax
+Set-Cookie: _landing_page=%2Fcollections%2Fall-products%3Fpage%3D3; Expires=Thu, 13-Jan-22 03:33:13 GMT; Domain=valuepetsupplies.com; Path=/; HttpOnly; SameSite=Lax
+Set-Cookie: _y=0ab2f967-6213-474a-bbde-1a7de0a415fc; Expires=Fri, 30-Dec-22 03:33:13 GMT; Domain=valuepetsupplies.com; Path=/; SameSite=Lax
+Set-Cookie: _s=1b42cf30-342c-436b-a6ad-22e03600c7ae; Expires=Thu, 30-Dec-21 04:03:13 GMT; Domain=valuepetsupplies.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_y=0ab2f967-6213-474a-bbde-1a7de0a415fc; Expires=Fri, 30-Dec-22 03:33:13 GMT; Domain=valuepetsupplies.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_s=1b42cf30-342c-436b-a6ad-22e03600c7ae; Expires=Thu, 30-Dec-21 04:03:13 GMT; Domain=valuepetsupplies.com; Path=/; SameSite=Lax
+Link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; rel=preconnect; crossorigin
+Etag: cacheable:3b27d39c1e9404d3c6a8d978e092af63
+X-Alternate-Cache-Key: cacheable:94536b2e02bb2479630637da2e02d26e
+Content-Encoding: gzip
+X-Cache: miss
+X-Frame-Options: DENY
+Content-Security-Policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+Strict-Transport-Security: max-age=7889238
+X-Shopid: 26744062123
+X-Shardid: 170
+Vary: Accept
+Content-Language: en
+X-Shopify-Stage: production
+X-Dc: gcp-us-central1,gcp-us-central1,gcp-us-central1
+X-Request-Id: 217c478f-362d-4f58-aea5-6ad46cd72efc
+X-Permitted-Cross-Domain-Policies: none
+X-Xss-Protection: 1; mode=block
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Cf-Cache-Status: DYNAMIC
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Server: cloudflare
+Cf-Ray: 6c5834961cb07e9b-LAX
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443"; ma=86400

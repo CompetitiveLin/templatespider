@@ -1,0 +1,26 @@
+Content-Length: 35911
+Content-Type: text/html;charset=UTF-8
+Content-Encoding: gzip
+Content-Security-Policy: frame-ancestors 'self' *.smartagent.app *.jdmesh.co *.choicestore.com http://localhost:* https://localhost:*; form-action https:; script-src https: 'unsafe-inline' 'unsafe-eval'
+Etag: b029a2c317952b79a9bf615f28871387
+Last-Modified: Thu, 06 Jan 2022 07:04:03 GMT
+P3P: CP="NOI ADM DEV COM NAV OUR STP"
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: sameorigin
+X-Xss-Protection: 1
+X-Akamai-Transformed: 9 34125 0 pmb=mRUM,2
+Expires: Thu, 06 Jan 2022 07:17:14 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 06 Jan 2022 07:17:14 GMT
+Vary: Accept-Encoding
+Set-Cookie: language=en; expires=Sat, 05-Feb-2022 07:17:14 GMT; Max-Age=2592000; path=/; secure; HttpOnly
+Set-Cookie: AKA_A2=A; expires=Thu, 06-Jan-2022 08:17:14 GMT; path=/; domain=choicestore.com; secure; HttpOnly
+Set-Cookie: akavpau_VP1=1641453734~id=fddb314495d49888f38ab2780d37f2f2; Path=/; HttpOnly; Secure; SameSite=None
+Server-Timing: cdn-cache; desc=MISS
+Server-Timing: edge; dur=148
+Server-Timing: origin; dur=193
+Link: <https://www.choicestore.com/skins/choicegb-desktop/public/fonts/Sora-Variable.ttf>;rel="preload";as="font";type="font/ttf";crossorigin
+Link: <https://nexus.ensighten.com>;rel="preconnect",<https://www.paypalobjects.com>;rel="preconnect",<https://maxcdn.bootstrapcdn.com>;rel="preconnect",<https://se.monetate.net>;rel="preconnect",<https://assets.pinterest.com>;rel="preconnect",<https://www.paypal.com>;rel="preconnect"
