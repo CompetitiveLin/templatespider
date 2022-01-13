@@ -4,6 +4,6 @@ def fab(max):
         yield b
         a, b = b, a+b
         n += 1
-
-for n in fab(100):
-    print(n)
+if __name__ == '__main__':
+    for n in fab(10):
+        print(n)
