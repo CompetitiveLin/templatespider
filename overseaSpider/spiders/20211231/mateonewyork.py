@@ -10,11 +10,12 @@ from overseaSpider.util.utils import isLinux
 
 from overseaSpider.items import ShopItem, SkuAttributesItem, SkuItem
 
-site_name = '' # 站名 如 'shopweareiconic'
-domain_name = '' # 完整域名 如 'shopweareiconic.com'
-url_prefix = '' # URL 前缀 如 'https://shopweareiconic.com'
+site_name = 'mateonewyork'  # 站名 如 'shopweareiconic'
+domain_name = 'mateonewyork.com'  # 完整域名 如 'shopweareiconic.com'
+url_prefix = 'http://mateonewyork.com'  # URL 前缀 如 'https://shopweareiconic.com'
 
 currency_json_data = None
+
 
 def convert_currency(price):
     # 这里是个强硬的货币转换（基于 shopify 自己的实时汇率表），部分非美元站点的美元价格是直接这样转来的。慎用，还是优先做美元站吧
@@ -24,11 +25,14 @@ def convert_currency(price):
     # 如无需转换：
     return '{:.2f}'.format(price)
 
+
 # 把 shopify 格式的 SKU 信息转换成我们的格式，一般不用改
 def translate_sku_data(raw_sku_data, options_arr):
     sku_item = SkuItem()
     sku_item['current_price'] = convert_currency(float(raw_sku_data['price']))
-    sku_item['original_price'] = convert_currency(float(raw_sku_data['compare_at_price'])) if raw_sku_data['compare_at_price'] and float(raw_sku_data['compare_at_price']) != 0 else sku_item['current_price']
+    sku_item['original_price'] = convert_currency(float(raw_sku_data['compare_at_price'])) if raw_sku_data[
+                                                                                                  'compare_at_price'] and float(
+        raw_sku_data['compare_at_price']) != 0 else sku_item['current_price']
     sku_item['imgs'] = [raw_sku_data['featured_image']['src']] if raw_sku_data['featured_image'] else []
 
     sku_attributes_item = SkuAttributesItem()
@@ -36,14 +40,15 @@ def translate_sku_data(raw_sku_data, options_arr):
         optionTitle = raw_sku_data['option' + str(i + 1)]
         if optionTitle and options_arr[i]:
             optionName = options_arr[i]['name'].strip()
-            if 'size' in optionName.lower() :
+            if 'size' in optionName.lower():
                 sku_attributes_item['size'] = optionTitle
             elif 'color' in optionName.lower() or 'colour' in optionName.lower():
                 sku_attributes_item['colour'] = optionTitle
             else:
-                sku_attributes_item['other'] = { optionName: optionTitle }
+                sku_attributes_item['other'] = {optionName: optionTitle}
     sku_item['attributes'] = sku_attributes_item
     return sku_item
+
 
 # 尝试从 shopify 的 product_type 字段解析出类目信息的函数
 def parse_category_by_product_type(product_type, full):
@@ -51,12 +56,13 @@ def parse_category_by_product_type(product_type, full):
     for separator in separators:
         if separator in product_type:
             arr = product_type.split(separator)
-            arr = list(map( lambda cat: cat.replace("/", "／"), arr))
+            arr = list(map(lambda cat: cat.replace("/", "／"), arr))
             if full:
                 return '/'.join(arr)
             else:
                 return arr[-1]
     return product_type.replace("/", "／")
+
 
 # 从 SKU 列表中提取出最低现价（最终展示的现价）
 def item_display_price(skus):
@@ -64,6 +70,7 @@ def item_display_price(skus):
     for sku in skus:
         min_price = min(float(sku['price']), min_price)
     return convert_currency(min_price)
+
 
 # 从 SKU 列表中提取出最高原价（最终展示的原价）
 def item_original_price(skus):
@@ -73,12 +80,14 @@ def item_original_price(skus):
             max_price = max(float(sku['compare_at_price']), max_price)
     return convert_currency(max_price) if max_price > 0 else item_display_price(skus)
 
+
 # 检测是否不缺货（是否所有 SKU 都有库存）
 def item_is_available(skus):
     for sku in skus:
         if bool(sku['available']) and float(sku['price']) > 0:
             return True
     return False
+
 
 # 解析 attributes 和 description（部分站点需要调整）
 def fill_attributes_and_description(shop_item, item_obj):
@@ -97,6 +106,7 @@ def fill_attributes_and_description(shop_item, item_obj):
             body_html = body_html.replace(match.group(1), "")
     shop_item["description"] = filter_text(body_html)
 
+
 def filter_text(input_text):
     input_text = re.sub(r'<.*?>', ' ', input_text)
     filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
@@ -106,13 +116,15 @@ def filter_text(input_text):
         input_text = input_text.replace(index, "").strip()
     return re.sub(r'\s+', ' ', input_text)
 
+
 class ShopweareiconicSpider(scrapy.Spider):
     name = site_name
     allowed_domains = [domain_name]
 
     @classmethod
     def update_settings(cls, settings):
-        custom_debug_settings = getattr(cls, 'custom_debug_settings' if getattr(cls, 'is_debug', False) else 'custom_settings', None)
+        custom_debug_settings = getattr(cls, 'custom_debug_settings' if getattr(cls, 'is_debug',
+                                                                                False) else 'custom_settings', None)
         system = isLinux()
         if not system:
             # 如果不是服务器, 则修改相关配置
@@ -135,8 +147,8 @@ class ShopweareiconicSpider(scrapy.Spider):
         'COOKIES_ENABLED': True,
         # 'HTTPCACHE_EXPIRATION_SECS': 14 * 24 * 60 * 60, # 秒
         'DOWNLOADER_MIDDLEWARES': {
-            #'overseaSpider.middlewares.PhantomjsUpdateCookieMiddleware': 543,
-            #'overseaSpider.middlewares.OverseaspiderProxyMiddleware': 400,
+            # 'overseaSpider.middlewares.PhantomjsUpdateCookieMiddleware': 543,
+            # 'overseaSpider.middlewares.OverseaspiderProxyMiddleware': 400,
             'overseaSpider.middlewares.OverseaspiderUserAgentMiddleware': 100,
         },
         'ITEM_PIPELINES': {
@@ -145,15 +157,16 @@ class ShopweareiconicSpider(scrapy.Spider):
     }
 
     def start_requests(self):
-        yield scrapy.Request(url = url_prefix + '/services/javascripts/currencies.js', callback=self.get_currency_rates,) # 获取汇率转换表
+        yield scrapy.Request(url=url_prefix + '/services/javascripts/currencies.js',
+                             callback=self.get_currency_rates, )  # 获取汇率转换表
 
     def get_currency_rates(self, response):
         currency_json_str = re.search(r'rates:\s*(\{.*?\})', response.text).group(1)
         global currency_json_data
         currency_json_data = json.loads(currency_json_str)
-        
+
         # limit 最大为 250，超过无效，勿改
-        yield scrapy.Request(url = url_prefix + '/products.json?page=1&limit=250', callback=self.parse, cookies={
+        yield scrapy.Request(url=url_prefix + '/products.json?page=1&limit=250', callback=self.parse, cookies={
             'cart_currency': 'USD'
         })
 
@@ -168,7 +181,7 @@ class ShopweareiconicSpider(scrapy.Spider):
                 continue
 
             shop_item = ShopItem()
-            
+
             shop_item["url"] = url_prefix + '/products/' + str(item_obj['handle'])
             shop_item["brand"] = item_obj['vendor']
             shop_item["name"] = item_obj['title']
@@ -192,7 +205,8 @@ class ShopweareiconicSpider(scrapy.Spider):
             ####### 正常
             shop_item["images"] = img_list
             ###############################
-            shop_item["sku_list"] = list(map( lambda sku: translate_sku_data(sku, item_obj['options']), item_obj['variants']))
+            shop_item["sku_list"] = list(
+                map(lambda sku: translate_sku_data(sku, item_obj['options']), item_obj['variants']))
 
             shop_item["measurements"] = ["Weight: None", "Height: None", "Length: None", "Depth: None"]
             status_list = list()
@@ -215,13 +229,11 @@ class ShopweareiconicSpider(scrapy.Spider):
             # 2. 详情页有类目信息的情况，注释掉上面两行，请求详情页，从详情页里解析类目信息
             # requests.get ...
 
-
             yield shop_item
             # print('=======')
             # print(shop_item)
 
         if len(items_list) > 0:
-
             coms = list(parse.urlparse(response.url))
             params = parse.parse_qs(coms[4])
             params['page'] = [int(params['page'][0]) + 1]
@@ -233,5 +245,5 @@ class ShopweareiconicSpider(scrapy.Spider):
                 callback=self.parse,
                 cookies={
                     # 'cart_currency': 'USD'
-                    }
+                }
             )
