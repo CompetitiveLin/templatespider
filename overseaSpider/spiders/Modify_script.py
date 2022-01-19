@@ -38,6 +38,6 @@ def update(name, Type, reason):
 
 if __name__ == '__main__':
     # 更新错误脚本的状态
-    update(name='', Type=4, reason='')
+    update(name='', Type=3, reason='')
     # 查看自己待修改更新的脚本名
     search(user_name='秃头')

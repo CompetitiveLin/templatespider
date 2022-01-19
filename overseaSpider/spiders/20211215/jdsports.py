@@ -4,6 +4,8 @@ import itertools
 import re
 import json
 import time
+
+import demjson
 import scrapy
 import requests
 from hashlib import md5
@@ -16,14 +18,14 @@ from overseaSpider.util.utils import isLinux
 # !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 '''=================================================
-@Project -> File   ：templatespider -> speedtechlights
+@Project -> File   ：templatespider -> jdsports
 @IDE    ：PyCharm
 @Author ：Mr. Tutou
-@Date   ：2022/1/10 10:25
+@Date   ：2022/1/19 16:28
 @Desc   ：
 =================================================='''
 
-website = 'speedtechlights'
+website = 'jdsports'
 
 
 def get_sku_price(product_id, attribute_list):
@@ -46,8 +48,8 @@ def convert(price):
 
 class ThecrossdesignSpider(scrapy.Spider):
     name = website
-    allowed_domains = ['speedtechlights.com']
-    start_urls = ['https://www.speedtechlights.com/']
+    allowed_domains = ['jdsports.co.uk']
+    start_urls = ['https://www.jdsports.co.uk/']
 
     @classmethod
     def update_settings(cls, settings):
@@ -56,7 +58,7 @@ class ThecrossdesignSpider(scrapy.Spider):
         system = isLinux()
         if not system:
             # 如果不是服务器, 则修改相关配置
-            custom_debug_settings["CLOSESPIDER_ITEMCOUNT"] = 2
+            custom_debug_settings["CLOSESPIDER_ITEMCOUNT"] = 5
             custom_debug_settings["HTTPCACHE_ENABLED"] = False
             custom_debug_settings["MONGODB_SERVER"] = "127.0.0.1"
         settings.setdict(custom_debug_settings or {}, priority='spider')
@@ -109,7 +111,7 @@ class ThecrossdesignSpider(scrapy.Spider):
                        u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
                        u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
                        '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n',
-                       '¥']
+                       '¥', '£']
         for index in filter_list:
             input_text = input_text.replace(index, "").strip()
         return input_text
@@ -127,44 +129,42 @@ class ThecrossdesignSpider(scrapy.Spider):
 
     def parse(self, response):
         """获取全部分类"""
-        category_urls = response.xpath('//a[@class="cat-item"]/@href').getall()
-        category_urls = [response.urljoin(url) for url in category_urls]
+        category_urls = ['https://www.jdsports.co.uk/page/men/','https://www.jdsports.co.uk/women/','https://www.jdsports.co.uk/kids/']
         for category_url in category_urls:
             yield scrapy.Request(url=category_url, callback=self.parse_list)
 
     def parse_list(self, response):
         """商品列表页"""
-        detail_url_list = response.xpath('//a[@class="featured-box"]/@href').getall()
+        detail_url_list = response.xpath('//a[@class="itemImage"]/@href').getall()
         detail_url_list = [response.urljoin(url) for url in detail_url_list]
         for detail_url in detail_url_list:
             yield scrapy.Request(url=detail_url, callback=self.parse_detail)
-        # next_page_url = response.xpath('//li[@class="pagination-item pagination-item--next"]/a/@href').get()
-        # if next_page_url:
-        #     yield scrapy.Request(url=next_page_url, callback=self.parse_list)
+        next_page_url = response.xpath('//a[@title="Next Page"]/@href').get()
+        if next_page_url:
+            next_page_url = response.urljoin(next_page_url)
+            yield scrapy.Request(url=next_page_url, callback=self.parse_list)
 
     def parse_detail(self, response):
         """详情页"""
         items = ShopItem()
         items["url"] = response.url
-
-        items["current_price"] = self.price_fliter(response.xpath('//span[@class="red2"]/text()').get())
-        price = response.xpath('//ul[@class="prices-list"]/li[1]/del/text()').get()
-        if not price or not price.strip():
-            price = response.xpath('//ul[@class="prices-list"]/li[2]/del/text()').get()
-        items["original_price"] = self.price_fliter(price) if price.strip() else items["current_price"]
-
-        name_list = response.xpath('//h1[@itemprop="name"]//text()').getall()
-        name = self.filter_text(''.join(name_list))
+        price = response.xpath('//span[@class="was"]/span/text()').get()
+        if price:
+            items["original_price"] = self.price_fliter(price)
+            items["current_price"] = self.price_fliter(response.xpath('//span[@class="now"]/span/text()').get())
+        else:
+            # price1 = self.price_fliter(response.xpath('//span[@class="pri"]/text()').get())
+            items["original_price"] = items["current_price"] = self.price_fliter(response.xpath('//span[@class="pri"]/text()').get())
+        name = response.xpath('//h1[@itemprop="name"]/text()').get().strip()
         items["name"] = name
 
-        cat_list = response.xpath('//ol[@class="breadcrumb"]/li/a/text()').getall()
-        cat_list.append(name)
+        cat_list = response.xpath('//div[@id="breads"]//a/span/text()').getall()
         if cat_list:
             cat_list = [cat.strip() for cat in cat_list if cat.strip()]
             items["cat"] = cat_list[-1]
             items["detail_cat"] = '/'.join(cat_list)
 
-        description = response.xpath('//div[@class="product-description"]//text()').getall()
+        description = response.xpath('//meta[@name="description"]/@content').getall()
         items["description"] = self.filter_text(self.filter_html_label(''.join(description)))
         items["source"] = self.allowed_domains[0]
 
@@ -175,25 +175,23 @@ class ThecrossdesignSpider(scrapy.Spider):
         #     attribute.append(attr1_list[a]+":"+attr2_list[a])
         # items["attributes"] = attribute
 
-        images_list = response.xpath('//a[@class="fancybox-gallery"]/@href').getall()
-        images_list = ['https:' + url for url in images_list]
+        images_list = response.xpath('//img[@class="product-image owl-lazy"]/@data-src').getall()
         items["images"] = images_list
-        items["brand"] = ''
 
-        opt_name = response.xpath('//div[@class="sel has-tooltip"]/select/option[1]/text()').getall()
-        if not opt_name:
+        brand = re.search(r'brand: "(.*?)",', response.text).group(1)
+        items["brand"] = brand if brand else ''
+        opt_name = ['size']
+        t = response.text.replace('\n', '').replace('\t', '')
+        temp = re.search(r'variants: (.*?),productGroups:', t).group(1).strip()
+        temp_json = demjson.decode(temp)
+        if len(temp_json) == 1:
             items["sku_list"] = []
             # return
         else:
-            opt_name = [name.replace(':', '').strip() for name in opt_name if name.strip()]
             opt_value = []
-            # print(opt_name)
-            opt_length = len(opt_name)
-            for i in range(opt_length):
-                value_temp = response.xpath(f'//div[@class="box"]/div[{i+1}]/select/option/text()').getall()[1:]
-                if value_temp:
-                    value_temp = [temp.strip() for temp in value_temp]
-                    opt_value.append(value_temp)
+            value_temp = [i['name'] for i in temp_json]
+            if value_temp:
+                opt_value.append(value_temp)
 
             # print(opt_value)
             attrs_list = []
@@ -210,26 +208,19 @@ class ThecrossdesignSpider(scrapy.Spider):
                 sku_info = SkuItem()
                 sku_attr = SkuAttributesItem()
                 other_temp = dict()
-                add_price = 0
-                img = ''
+
                 for attr in attrs.items():
                     if attr[0] == 'Size':
                         sku_attr["size"] = attr[1]
                     elif attr[0] == 'Color':
                         sku_attr["colour"] = attr[1]
-                        img = response.xpath(f"//option[contains(text(),'{attr[1]}')]/@picture").get()
                     else:
                         other_temp[attr[0]] = attr[1]
-                    if '$' in attr[1]:
-                        add_price += float(attr[1].split('$')[-1].strip())
                 if len(other_temp):
                     sku_attr["other"] = other_temp
-                if img:
-                    sku_info['imgs'] = ['https://www.speedtechlights.com/product_attribute_pictures/' + img]
-                else:
-                    sku_info['imgs'] = []
-                sku_info["current_price"] = '{:.2f}'.format(float(items["current_price"]) + + add_price)
-                sku_info["original_price"] = '{:.2f}'.format(float(items["original_price"]) + add_price)
+
+                sku_info["current_price"] = items["current_price"]
+                sku_info["original_price"] = items["original_price"]
                 sku_info["url"] = response.url
                 sku_info["attributes"] = sku_attr
                 sku_list.append(sku_info)

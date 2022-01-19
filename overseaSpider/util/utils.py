@@ -79,7 +79,8 @@ def isLinux():
     if (sysstr == "Linux"):
         return True
     else:
-        print("Other System ")
+        # print("Other System ")
+        pass
     return False
 
 
