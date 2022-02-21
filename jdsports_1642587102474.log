@@ -1,0 +1,83 @@
+2022-01-19 18:11:43 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-19 18:11:43 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-19 18:11:43 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'jdsports_1642587102474.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-19 18:11:43 [scrapy.extensions.telnet] INFO: Telnet Password: 21edfb723dc01476
+2022-01-19 18:11:43 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-19 18:11:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-19 18:11:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-19 18:11:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-19 18:11:43 [scrapy.core.engine] INFO: Spider opened
+2022-01-19 18:11:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-19 18:11:43 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-19 18:11:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/> (referer: None)
+2022-01-19 18:11:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/kids/> (referer: https://www.jdsports.co.uk/)
+2022-01-19 18:11:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/women/> (referer: https://www.jdsports.co.uk/)
+2022-01-19 18:11:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.jdsports.co.uk/men/> from <GET https://www.jdsports.co.uk/page/men/>
+2022-01-19 18:11:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/pink-nike-revolution-6-junior/16229831/> (referer: https://www.jdsports.co.uk/kids/)
+2022-01-19 18:11:48 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:11:49 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_472381_a?qlt=92&w=750&h=531&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:11:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/black-jordan-jumpman-colour-block-poly-tracksuit-children/16265659/> (referer: https://www.jdsports.co.uk/kids/)
+2022-01-19 18:11:51 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:11:51 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_471577_a?qlt=92&w=750&h=957&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:11:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/kids/?from=72> (referer: https://www.jdsports.co.uk/kids/)
+2022-01-19 18:11:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/men/> (referer: https://www.jdsports.co.uk/)
+2022-01-19 18:11:52 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.jdsports.co.uk/product/black-nike-club-fleece-gloves/16266209/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-01-19 18:11:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/women/?from=72> (referer: https://www.jdsports.co.uk/women/)
+2022-01-19 18:11:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/black-converse-chuck-taylor-all-star-70-high-womens/16188202/> (referer: https://www.jdsports.co.uk/women/)
+2022-01-19 18:11:55 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:11:55 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_067803_a?qlt=92&w=750&h=531&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:11:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/pink-nike-plus-size-swoosh-14-zip-top/16265201/> (referer: https://www.jdsports.co.uk/women/)
+2022-01-19 18:11:56 [overseaSpider.util.item_check] WARNING: 注意: cat和detail_cat可能不匹配! 检查一下name或者cat中是否有/ 
+cat:Nike Plus Size Swoosh 1/4 Zip Top
+detail_cat:Home/Women/Womens Clothing/Performance Clothing/Nike Plus Size Swoosh 1/4 Zip Top 
+
+2022-01-19 18:11:56 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:11:56 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_505472_a?qlt=92&w=750&h=957&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:11:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/kids/?from=144> (referer: https://www.jdsports.co.uk/kids/?from=72)
+2022-01-19 18:11:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/men/?from=72> (referer: https://www.jdsports.co.uk/men/)
+2022-01-19 18:12:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/women/?from=144> (referer: https://www.jdsports.co.uk/women/?from=72)
+2022-01-19 18:12:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/grey-nike-running-synthetic-jacket/16258254/> (referer: https://www.jdsports.co.uk/women/?from=72)
+2022-01-19 18:12:01 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:12:02 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_472724_a?qlt=92&w=750&h=957&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:12:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.jdsports.co.uk/product/black-pink-soda-sport-shine-tights/16262757/> (referer: https://www.jdsports.co.uk/women/?from=72)
+2022-01-19 18:12:03 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): i8.amplience.net:443
+2022-01-19 18:12:03 [urllib3.connectionpool] DEBUG: https://i8.amplience.net:443 "GET /i/jpl/jd_507735_a?qlt=92&w=750&h=957&v=1&fmt=auto HTTP/1.1" 403 303
+2022-01-19 18:12:04 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-01-19 18:12:04 [scrapy.core.engine] INFO: Closing spider (shutdown)

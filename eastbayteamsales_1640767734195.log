@@ -1,0 +1,149 @@
+2021-12-29 16:48:54 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-29 16:48:54 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-29 16:48:54 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 10,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'eastbayteamsales_1640767734195.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-29 16:48:54 [scrapy.extensions.telnet] INFO: Telnet Password: 84743534a353c027
+2021-12-29 16:48:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-29 16:48:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-29 16:48:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-29 16:48:54 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-29 16:48:54 [scrapy.core.engine] INFO: Spider opened
+2021-12-29 16:48:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-29 16:48:54 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-29 16:48:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/> (referer: None)
+2021-12-29 16:48:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Girls/_-_/N-1mz?crumbs=2123> (referer: https://www.eastbayteamsales.com/)
+2021-12-29 16:48:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?crumbs=2122> (referer: https://www.eastbayteamsales.com/)
+2021-12-29 16:48:58 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.eastbayteamsales.com/product/model:303132/sku:MSBC810/marucci-cat-8-senior-usssa-league-bat-youth/white/red/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-12-29 16:49:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?crumbs=62> (referer: https://www.eastbayteamsales.com/)
+2021-12-29 16:49:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?crumbs=61> (referer: https://www.eastbayteamsales.com/)
+2021-12-29 16:49:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:320449/sku:D0101010/nike-team-core-softball-pants-girls-grade-school/black/> (referer: https://www.eastbayteamsales.com/Girls/_-_/N-1mz?crumbs=2123)
+2021-12-29 16:49:01 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:02 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/D0101010/large_wide/nike-team-core-softball-pants-girls-grade-school HTTP/1.1" 200 32038
+2021-12-29 16:49:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:02 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:02 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=60&crumbs=2123&Nao=60> (referer: https://www.eastbayteamsales.com/Girls/_-_/N-1mz?crumbs=2123)
+2021-12-29 16:49:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=60&crumbs=2122&Nao=60> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?crumbs=2122)
+2021-12-29 16:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=60&crumbs=62&Nao=60> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?crumbs=62)
+2021-12-29 16:49:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=60&crumbs=61&Nao=60> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?crumbs=61)
+2021-12-29 16:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:304211/sku:6897100/nike-6-pack-dri-fit-plus-crew-socks-mens/white/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?crumbs=61)
+2021-12-29 16:49:07 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:08 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/X6897965/large_wide/nike-6-pack-everyday-plus-cushioned-socks-mens HTTP/1.1" 200 78388
+2021-12-29 16:49:08 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:08 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:08 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=120&crumbs=2123&Nao=120> (referer: https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=60&crumbs=2123&Nao=60)
+2021-12-29 16:49:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=120&crumbs=2122&Nao=120> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=60&crumbs=2122&Nao=60)
+2021-12-29 16:49:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=120&crumbs=62&Nao=120> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=60&crumbs=62&Nao=60)
+2021-12-29 16:49:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=120&crumbs=61&Nao=120> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=60&crumbs=61&Nao=60)
+2021-12-29 16:49:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:325787/sku:D4371008/nike-react-infinity-run-flyknit-mens/grey/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=60&crumbs=61&Nao=60)
+2021-12-29 16:49:15 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:16 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/D4371002/large_wide/nike-react-infinity-run-flyknit-mens HTTP/1.1" 200 57065
+2021-12-29 16:49:16 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:16 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:16 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=180&crumbs=2123&Nao=180> (referer: https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=120&crumbs=2123&Nao=120)
+2021-12-29 16:49:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=180&crumbs=2122&Nao=180> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=120&crumbs=2122&Nao=120)
+2021-12-29 16:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=180&crumbs=62&Nao=180> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=120&crumbs=62&Nao=120)
+2021-12-29 16:49:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=180&crumbs=61&Nao=180> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=120&crumbs=61&Nao=120)
+2021-12-29 16:49:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:329968/sku:J1696100/nike-team-l%252Fs-hoodie-t-shirt-mens/white/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=120&crumbs=61&Nao=120)
+2021-12-29 16:49:21 [overseaSpider.util.item_check] WARNING: 注意: cat和detail_cat可能不匹配! 检查一下name或者cat中是否有/ 
+cat:Nike Team L/S Hoodie T-Shirt - Men's
+detail_cat:Home/Nike Team L/S Hoodie T-Shirt - Men's 
+
+2021-12-29 16:49:21 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:22 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/J1696063/large_wide/nike-team-l%252Fs-hoodie-t-shirt-mens HTTP/1.1" 200 88594
+2021-12-29 16:49:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:23 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.eastbayteamsales.com> from <GET https://www.eastbayteamsales.com/product/model:336694/sku:A1584676/nike-nsw-t-shirt-zero-max-organic-cotton-girls-grade-school/purple/>
+2021-12-29 16:49:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=240&crumbs=2122&Nao=240> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=180&crumbs=2122&Nao=180)
+2021-12-29 16:49:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=240&crumbs=62&Nao=240> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=180&crumbs=62&Nao=180)
+2021-12-29 16:49:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=240&crumbs=61&Nao=240> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=180&crumbs=61&Nao=180)
+2021-12-29 16:49:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com> (referer: https://www.eastbayteamsales.com/Girls/_-_/N-1mz?cm_PAGE=180&crumbs=2123&Nao=180)
+2021-12-29 16:49:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:305325/sku:J3372418/nike-team-dry-woven-jacket-mens/navy/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=180&crumbs=61&Nao=180)
+2021-12-29 16:49:29 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:30 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/J3372466/large_wide/nike-team-dry-woven-jacket-mens HTTP/1.1" 200 74929
+2021-12-29 16:49:30 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:30 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:30 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=300&crumbs=2122&Nao=300> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=240&crumbs=2122&Nao=240)
+2021-12-29 16:49:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=300&crumbs=62&Nao=300> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=240&crumbs=62&Nao=240)
+2021-12-29 16:49:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=300&crumbs=61&Nao=300> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=240&crumbs=61&Nao=240)
+2021-12-29 16:49:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.eastbayteamsales.com> from <GET https://www.eastbayteamsales.com/product/model:140813/sku:6842303/eastbay-evapor-core-long-sleeve-compression-crew-mens/blue/blue/>
+2021-12-29 16:49:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:294314/sku:05787001/under-armour-team-storm-rain-jacket-mens/black/grey/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=240&crumbs=61&Nao=240)
+2021-12-29 16:49:36 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:37 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/05787001/large_wide/under-armour-team-storm-rain-jacket-mens HTTP/1.1" 200 43245
+2021-12-29 16:49:37 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:37 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:37 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=360&crumbs=2122&Nao=360> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=300&crumbs=2122&Nao=300)
+2021-12-29 16:49:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=360&crumbs=62&Nao=360> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=300&crumbs=62&Nao=300)
+2021-12-29 16:49:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=360&crumbs=61&Nao=360> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=300&crumbs=61&Nao=300)
+2021-12-29 16:49:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:259611/sku:27980613/nike-team-legend-long-sleeve-poly-top-mens/red/red/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=300&crumbs=61&Nao=300)
+2021-12-29 16:49:42 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:43 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/27980888/large_wide/nike-team-legend-long-sleeve-poly-top-mens HTTP/1.1" 200 93201
+2021-12-29 16:49:43 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:43 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:43 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:328547/sku:0605156/nike-vapor-jet-6.0-receiver-gloves-mens/white/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=300&crumbs=61&Nao=300)
+2021-12-29 16:49:45 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:46 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/N4365989/large_wide/nike-vapor-jet-6.0-receiver-gloves-mens HTTP/1.1" 200 78368
+2021-12-29 16:49:46 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:46 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:46 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=420&crumbs=2122&Nao=420> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=360&crumbs=2122&Nao=360)
+2021-12-29 16:49:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=420&crumbs=62&Nao=420> (referer: https://www.eastbayteamsales.com/Womens/_-_/N-1q?cm_PAGE=360&crumbs=62&Nao=360)
+2021-12-29 16:49:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Mens/_-_/N-1pZ1mm?cm_PAGE=420&crumbs=61%202110&Nao=420> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=360&crumbs=61&Nao=360)
+2021-12-29 16:49:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:288044/sku:99915100/nike-team-dry-park-vi-jersey-mens/all-white/white/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=360&crumbs=61&Nao=360)
+2021-12-29 16:49:50 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:51 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/99915100/large_wide/nike-team-dry-park-vi-jersey-mens HTTP/1.1" 200 31919
+2021-12-29 16:49:51 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:51 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:51 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/product/model:328547/sku:0605146/nike-vapor-jet-6.0-receiver-gloves-mens/white/> (referer: https://www.eastbayteamsales.com/Mens/_-_/N-1p?cm_PAGE=360&crumbs=61&Nao=360)
+2021-12-29 16:49:52 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.footlocker.com:443
+2021-12-29 16:49:53 [urllib3.connectionpool] DEBUG: https://images.footlocker.com:443 "GET /pi/N4365989/large_wide/nike-vapor-jet-6.0-receiver-gloves-mens HTTP/1.1" 200 78368
+2021-12-29 16:49:53 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 16:49:53 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 16:49:53 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 54 8192
+2021-12-29 16:49:54 [scrapy.extensions.logstats] INFO: Crawled 40 pages (at 40 pages/min), scraped 0 items (at 0 items/min)
+2021-12-29 16:49:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=480&crumbs=2122&Nao=480> (referer: https://www.eastbayteamsales.com/Boys/_-_/N-1my?cm_PAGE=420&crumbs=2122&Nao=420)
+2021-12-29 16:49:55 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-12-29 16:49:55 [scrapy.core.engine] INFO: Closing spider (shutdown)

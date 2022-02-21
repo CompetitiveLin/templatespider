@@ -1,0 +1,66 @@
+2022-01-19 18:26:50 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-19 18:26:50 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-19 18:26:50 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 2,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'speedtechlights_1642588010368.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-19 18:26:50 [scrapy.extensions.telnet] INFO: Telnet Password: 01feb49bc634347c
+2022-01-19 18:26:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-19 18:26:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-19 18:26:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-19 18:26:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-19 18:26:51 [scrapy.core.engine] INFO: Spider opened
+2022-01-19 18:26:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-19 18:26:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-19 18:26:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/> (referer: None)
+2022-01-19 18:26:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/tailgate-warning-light-bars> (referer: https://www.speedtechlights.com/)
+2022-01-19 18:26:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/led-work-lights> (referer: https://www.speedtechlights.com/)
+2022-01-19 18:26:55 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.speedtechlights.com/led-off-road-light-bars/4-pack-quad-carbine-off-road-square-led-work-light> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-01-19 18:26:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/led-off-road-light-bars> (referer: https://www.speedtechlights.com/)
+2022-01-19 18:26:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/speakers-sirens-100w> (referer: https://www.speedtechlights.com/)
+2022-01-19 18:26:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/LED-light-bar-sale> (referer: https://www.speedtechlights.com/)
+2022-01-19 18:27:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/tailgate-warning-light-bars/60-inch-dual-row-truck-tailgate-led-warning-light-bar> (referer: https://www.speedtechlights.com/tailgate-warning-light-bars)
+2022-01-19 18:27:00 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): speedtechlights.imgix.net:443
+2022-01-19 18:27:01 [urllib3.connectionpool] DEBUG: https://speedtechlights.imgix.net:443 "GET /product_pictures/1634745078_60-Inch-Tailgate-Strobe-Warning-Light-Bar-Reverse-Truck-Stick-Bar.jpg?auto=format,compress HTTP/1.1" 200 11863
+2022-01-19 18:27:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/LED-Grille-Surface-Mount-Lights/4-pack-micro-carbine-LED-off-road-surface-mount> (referer: https://www.speedtechlights.com/led-work-lights)
+2022-01-19 18:27:02 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): speedtechlights.imgix.net:443
+2022-01-19 18:27:03 [urllib3.connectionpool] DEBUG: https://speedtechlights.imgix.net:443 "GET /product_pictures/1596044895_Micro-Carbine-Off-Road-LED-Work-Light-4-Pack.jpg?auto=format,compress HTTP/1.1" 200 13019
+2022-01-19 18:27:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/police-sirens/fury-30-watt-motorcycle-police-siren-speaker> (referer: https://www.speedtechlights.com/speakers-sirens-100w)
+2022-01-19 18:27:04 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): speedtechlights.imgix.net:443
+2022-01-19 18:27:06 [urllib3.connectionpool] DEBUG: https://speedtechlights.imgix.net:443 "GET /product_pictures/1586182210_Motorcycle-Police-Siren-Speaker-Angle.jpg?auto=format,compress HTTP/1.1" 200 6944
+2022-01-19 18:27:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.speedtechlights.com/mounting-brackets-consoles/carbine-off-road-light-bar-pole-mount-brackets> (referer: https://www.speedtechlights.com/led-off-road-light-bars)
+2022-01-19 18:27:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): speedtechlights.imgix.net:443

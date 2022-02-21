@@ -1,0 +1,91 @@
+2021-12-28 11:02:28 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-28 11:02:28 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-28 11:02:28 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 2,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'classiccarshirts_1640660548257.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-28 11:02:28 [scrapy.extensions.telnet] INFO: Telnet Password: a3322108a1e0336e
+2021-12-28 11:02:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-28 11:02:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-28 11:02:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-28 11:02:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-28 11:02:28 [scrapy.core.engine] INFO: Spider opened
+2021-12-28 11:02:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-28 11:02:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-28 11:02:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.classiccarshirts.com/> (referer: None)
+2021-12-28 11:02:29 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.classiccarshirts.com/> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\templatespider\overseaSpider\spiders\20211215\classiccarshirts.py", line 128, in parse
+    yield scrapy.Request(url=category_url, callback=self.parse_list)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\http\request\__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\http\request\__init__.py", line 73, in _set_url
+    raise ValueError(f'Missing scheme in request url: {self._url}')
+ValueError: Missing scheme in request url: /www.classiccarshirts.com/Hot-Rod-and-Rat-Rod-t-shirts-s/1817.htm
+2021-12-28 11:02:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.classiccarshirts.com/classic-muscle-cars-s/1843.htm> (referer: https://www.classiccarshirts.com/)
+2021-12-28 11:02:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.classiccarshirts.com/Ford-Mustang-Pony-Up-T-shirt-p/00498.htm> (referer: https://www.classiccarshirts.com/classic-muscle-cars-s/1843.htm)
+2021-12-28 11:02:31 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn3.volusion.com:443
+2021-12-28 11:02:32 [urllib3.connectionpool] DEBUG: https://cdn3.volusion.com:443 "GET /knqlh.yoelj/v/vspfiles/photos/00498-2.jpg HTTP/1.1" 200 159956
+2021-12-28 11:02:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.classiccarshirts.com/Chevrolet-Nova-Chevy-II-Station-Wagon-T-shirt-p/00519.htm> (referer: https://www.classiccarshirts.com/classic-muscle-cars-s/1843.htm)
+2021-12-28 11:02:33 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn3.volusion.com:443
+2021-12-28 11:02:35 [urllib3.connectionpool] DEBUG: https://cdn3.volusion.com:443 "GET /knqlh.yoelj/v/vspfiles/photos/00519-2.jpg HTTP/1.1" 200 132544
+2021-12-28 11:02:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.classiccarshirts.com/Pontiac-Firebird-Trans-Am-T-shirt-p/00515.htm> (referer: https://www.classiccarshirts.com/classic-muscle-cars-s/1843.htm)
+2021-12-28 11:02:36 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn3.volusion.com:443

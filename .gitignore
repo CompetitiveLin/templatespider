@@ -15,7 +15,6 @@ fashionSpider/__pycache__
 fashionSpider/spiders/__pycache__
 mongo.pem
 *.pem
-*.log
 blm/
 hm/
 sephora/

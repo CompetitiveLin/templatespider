@@ -1,0 +1,78 @@
+2022-01-07 10:38:45 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-07 10:38:45 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-07 10:38:45 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'lcbo_1641523125311.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-07 10:38:45 [scrapy.extensions.telnet] INFO: Telnet Password: 526606c9c426b72b
+2022-01-07 10:38:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-07 10:38:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-07 10:38:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-07 10:38:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-07 10:38:45 [scrapy.core.engine] INFO: Spider opened
+2022-01-07 10:38:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-07 10:38:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-07 10:38:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo> from <GET https://www.lcbo.com/>
+2022-01-07 10:38:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo> (referer: None)
+2022-01-07 10:38:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/SearchDisplay?sType=SimpleSearch&ddkey=ProductListingView_6_3074457345618261807_2310&fromPage=catalogEntryList&facet_1=onsale%253A%2522ON%2BSALE%2522&searchTerm=Vintages-Essentials&urlRequestType=Base&catalogId=10051&resultType=both&showResultsPage=true&disableProductCompare=false&beginIndex=0&facetName_1=ON+SALE&langId=-1&enableSKUListView=false&orderBy=5&ajaxStoreImageDir=%2Fwcsstore%2FLCBOStorefrontAssetStore%2F&storeId=10203> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo)
+2022-01-07 10:38:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/beer-cider-16> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo)
+2022-01-07 10:38:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/coolers-18-1> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo)
+2022-01-07 10:38:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/spirits-15> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo)
+2022-01-07 10:38:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo)
+2022-01-07 10:38:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/joel-gott-815-cabernet-sauvignon-444059> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/SearchDisplay?sType=SimpleSearch&ddkey=ProductListingView_6_3074457345618261807_2310&fromPage=catalogEntryList&facet_1=onsale%253A%2522ON%2BSALE%2522&searchTerm=Vintages-Essentials&urlRequestType=Base&catalogId=10051&resultType=both&showResultsPage=true&disableProductCompare=false&beginIndex=0&facetName_1=ON+SALE&langId=-1&enableSKUListView=false&orderBy=5&ajaxStoreImageDir=%2Fwcsstore%2FLCBOStorefrontAssetStore%2F&storeId=10203)
+2022-01-07 10:38:57 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443
+2022-01-07 10:39:00 [urllib3.connectionpool] DEBUG: https://www.lcbo.com:443 "GET /content/dam/lcbo/products/444059.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg HTTP/1.1" 200 56683
+2022-01-07 10:39:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/beer-cider-16/heineken-18> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/beer-cider-16)
+2022-01-07 10:39:00 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443
+2022-01-07 10:39:03 [urllib3.connectionpool] DEBUG: https://www.lcbo.com:443 "GET /content/dam/lcbo/products/000018.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg HTTP/1.1" 200 113576
+2022-01-07 10:39:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/coolers-18-1?pageView=grid&orderBy=5&beginIndex=12> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/coolers-18-1)
+2022-01-07 10:39:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/spirits-15?pageView=grid&orderBy=5&beginIndex=12> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/spirits-15)
+2022-01-07 10:39:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14?pageView=grid&orderBy=5&beginIndex=12> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14)
+2022-01-07 10:39:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14/spumante-bambino-1826> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14)
+2022-01-07 10:39:08 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443
+2022-01-07 10:39:10 [urllib3.connectionpool] DEBUG: https://www.lcbo.com:443 "GET /content/dam/lcbo/products/001826.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg HTTP/1.1" 200 74708
+2022-01-07 10:39:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14/angels-gate-chardonnay-vqa-1818> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14)
+2022-01-07 10:39:10 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443
+2022-01-07 10:39:13 [urllib3.connectionpool] DEBUG: https://www.lcbo.com:443 "GET /content/dam/lcbo/products/001818.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg HTTP/1.1" 200 62589
+2022-01-07 10:39:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/coolers-18-1?pageView=grid&orderBy=5&beginIndex=24> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/coolers-18-1?pageView=grid&orderBy=5&beginIndex=12)
+2022-01-07 10:39:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/spirits-15?pageView=grid&orderBy=5&beginIndex=24> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/spirits-15?pageView=grid&orderBy=5&beginIndex=12)
+2022-01-07 10:39:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14?pageView=grid&orderBy=5&beginIndex=24> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14?pageView=grid&orderBy=5&beginIndex=12)
+2022-01-07 10:39:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14/deinhard-green-label-riesling-mosel-8094> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14?pageView=grid&orderBy=5&beginIndex=12)
+2022-01-07 10:39:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443
+2022-01-07 10:39:22 [urllib3.connectionpool] DEBUG: https://www.lcbo.com:443 "GET /content/dam/lcbo/products/008094.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg HTTP/1.1" 200 67558
+2022-01-07 10:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14/kwv-roodeberg-red-7187> (referer: https://www.lcbo.com/webapp/wcs/stores/servlet/en/lcbo/wine-14?pageView=grid&orderBy=5&beginIndex=12)
+2022-01-07 10:39:22 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.lcbo.com:443

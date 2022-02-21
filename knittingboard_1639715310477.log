@@ -1,0 +1,80 @@
+2021-12-17 12:28:30 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-17 12:28:30 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-17 12:28:30 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'knittingboard_1639715310477.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-17 12:28:30 [scrapy.extensions.telnet] INFO: Telnet Password: f38cd9c48ba83980
+2021-12-17 12:28:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-17 12:28:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-17 12:28:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-17 12:28:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-17 12:28:31 [scrapy.core.engine] INFO: Spider opened
+2021-12-17 12:28:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-17 12:28:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-17 12:28:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/> (referer: None)
+2021-12-17 12:28:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/books/> (referer: https://www.knittingboard.com/)
+2021-12-17 12:28:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/accessories/> (referer: https://www.knittingboard.com/)
+2021-12-17 12:28:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/knitting-looms-boards/> (referer: https://www.knittingboard.com/)
+2021-12-17 12:28:35 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.knittingboard.com/3-peg-flexee-combo-pack/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-12-17 12:28:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/wood-looms/> (referer: https://www.knittingboard.com/)
+2021-12-17 12:28:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/meet-zippy/> (referer: https://www.knittingboard.com/)
+2021-12-17 12:28:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/zippy-loom-projects/> (referer: https://www.knittingboard.com/books/)
+2021-12-17 12:28:39 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:40 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/278/images/775/coverimage_zippy__68040.1433767489.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/accessories/?sort=featured&page=2> (referer: https://www.knittingboard.com/accessories/)
+2021-12-17 12:28:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/knitting-looms-boards/?sort=featured&page=2> (referer: https://www.knittingboard.com/knitting-looms-boards/)
+2021-12-17 12:28:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/15-weaving-loom-extender/> (referer: https://www.knittingboard.com/wood-looms/)
+2021-12-17 12:28:43 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:45 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/604/images/1530/weaving_extenders_nopegs__58995.1569699890.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/zippy-corners/> (referer: https://www.knittingboard.com/meet-zippy/)
+2021-12-17 12:28:45 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:46 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/305/images/830/Corners_blister__75326.1445618689.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/zippy-loom/> (referer: https://www.knittingboard.com/meet-zippy/)
+2021-12-17 12:28:47 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:48 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/277/images/772/zippyyjpeg__71114.1433766574.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/rotating-double-knit-how-to-dvd/> (referer: https://www.knittingboard.com/accessories/?sort=featured&page=2)
+2021-12-17 12:28:49 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:49 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/536/images/1350/dvd_rotating2__52727.1537568183.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/knitting-looms-boards/?sort=featured&page=3> (referer: https://www.knittingboard.com/knitting-looms-boards/?sort=featured&page=2)
+2021-12-17 12:28:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/zippy-bulk-set/> (referer: https://www.knittingboard.com/knitting-looms-boards/?sort=featured&page=2)
+2021-12-17 12:28:51 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:53 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/565/images/1437/Zippy_BulkPackage4_031519_2__94256.1556829761.1280.1280.jpg?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.knittingboard.com/sock-loom-original-with-project-book/> (referer: https://www.knittingboard.com/knitting-looms-boards/?sort=featured&page=2)
+2021-12-17 12:28:54 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn10.bigcommerce.com:443
+2021-12-17 12:28:56 [urllib3.connectionpool] DEBUG: https://cdn10.bigcommerce.com:443 "GET /s-fctqc2/products/218/images/1716/sockloom_original_book__21603.1605203772.1280.1280.png?c=2 HTTP/1.1" 200 None
+2021-12-17 12:28:56 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 

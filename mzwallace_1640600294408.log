@@ -1,0 +1,77 @@
+2021-12-27 18:18:14 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-27 18:18:14 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-27 18:18:14 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 3,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'mzwallace_1640600294408.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-27 18:18:14 [scrapy.extensions.telnet] INFO: Telnet Password: 98e91e12b7098345
+2021-12-27 18:18:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-27 18:18:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-27 18:18:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-27 18:18:15 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-27 18:18:15 [scrapy.core.engine] INFO: Spider opened
+2021-12-27 18:18:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-27 18:18:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-27 18:18:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/> (referer: None)
+2021-12-27 18:18:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop> (referer: https://www.mzwallace.com/)
+2021-12-27 18:18:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop?start=24&sz=24> (referer: https://www.mzwallace.com/shop)
+2021-12-27 18:18:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop/products/1275x1595/magnet-rec-oxford-metro-backpack-deluxe/256616.html?cgid=shop> (referer: https://www.mzwallace.com/shop)
+2021-12-27 18:18:20 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:21 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1275x1595/magnet-rec-oxford-metro-backpack-deluxe/256616.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:21 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:22 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1275x1590/black-oxford-metro-backpack-deluxe/236385.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:22 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:23 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1275x1779/rouge-lacquer-metro-backpack-deluxe/507962.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:23 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:24 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /dw/image/v2/BBHD_PRD/on/demandware.static/-/Sites-master/default/dwe8970e0b/images/hi-res/1275x1595-f8432/AW21_Jul_1275X1595_A1.jpg?sw=3000&strip=false HTTP/1.1" 200 496117
+2021-12-27 18:18:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop/products/1312x1590/black-rec-oxford-metro-cosmetic/513857.html?cgid=shop> (referer: https://www.mzwallace.com/shop)
+2021-12-27 18:18:26 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:27 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1312x1590/black-rec-oxford-metro-cosmetic/513857.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:28 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1312x1750/nyc-graffiti-print-oxford-metro-cosmetic/513881.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:28 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:29 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /dw/image/v2/BBHD_PRD/on/demandware.static/-/Sites-master/default/dw7afa1835/images/hi-res/1312x1590-5389b/211020_MZW_1312X1590_A1.jpg?sw=3000&strip=false HTTP/1.1" 200 392654
+2021-12-27 18:18:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop/products/1352x1590/black-rec-oxford-metro-sling/513858.html?cgid=shop> (referer: https://www.mzwallace.com/shop)
+2021-12-27 18:18:30 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:31 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1352x1708/ivy-rec-oxford-metro-sling/513875.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:31 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:32 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /shop/products/1352x1590/black-rec-oxford-metro-sling/513858.html?cgid=shop HTTP/1.1" 200 None
+2021-12-27 18:18:32 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:33 [urllib3.connectionpool] DEBUG: https://www.mzwallace.com:443 "GET /dw/image/v2/BBHD_PRD/on/demandware.static/-/Sites-master/default/dw3930bcb1/images/hi-res/1352x1590-55e48/211020_MZW_1352X1590_A1.jpg?sw=3000&strip=false HTTP/1.1" 200 407981
+2021-12-27 18:18:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzwallace.com/shop/products/1354x1590/black-rec-oxford-metro-team/513859.html?cgid=shop> (referer: https://www.mzwallace.com/shop)
+2021-12-27 18:18:35 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.mzwallace.com:443
+2021-12-27 18:18:35 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 

@@ -1,0 +1,207 @@
+2022-01-11 12:19:56 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-11 12:19:56 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-11 12:19:56 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'robertrtg_1641874796201.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-11 12:19:56 [scrapy.extensions.telnet] INFO: Telnet Password: ecf93de55a3efe8b
+2022-01-11 12:19:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-11 12:19:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-11 12:19:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-11 12:19:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-11 12:19:56 [scrapy.core.engine] INFO: Spider opened
+2022-01-11 12:19:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-11 12:19:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-11 12:19:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.robertrtg.com/store/pc/home.asp> from <GET https://www.robertrtg.com/>
+2022-01-11 12:19:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/home.asp> (referer: None)
+2022-01-11 12:19:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/viewcategories.asp> (referer: https://www.robertrtg.com/store/pc/home.asp)
+2022-01-11 12:20:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Just-One-Last-One-c319.htm> (referer: https://www.robertrtg.com/store/pc/viewcategories.asp)
+2022-01-11 12:20:01 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.robertrtg.com/store/pc/Just-One-Last-One-c319.htm> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-01-11 12:20:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Apparel-c349.htm> (referer: https://www.robertrtg.com/store/pc/viewcategories.asp)
+2022-01-11 12:20:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm> (referer: https://www.robertrtg.com/store/pc/viewcategories.asp)
+2022-01-11 12:20:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Cleaning-Supplies-c7.htm> (referer: https://www.robertrtg.com/store/pc/viewcategories.asp)
+2022-01-11 12:20:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Books-and-Manuals-c13.htm> (referer: https://www.robertrtg.com/store/pc/viewcategories.asp)
+2022-01-11 12:20:16 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/More-Shotgun-Parts-c454.htm>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/More-Shotgun-Parts-c454.htm took longer than 10.0 seconds..
+2022-01-11 12:20:17 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/More-Rifle-Parts-c15.htm>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/More-Rifle-Parts-c15.htm took longer than 10.0 seconds..
+2022-01-11 12:20:19 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/Slings-c332.htm>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/Slings-c332.htm took longer than 10.0 seconds..
+2022-01-11 12:20:22 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/Cleaning-Supplies-c7.htm?pageStyle=h&ProdSort=19&page=2&idCategory=7&viewAll=yes>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/Cleaning-Supplies-c7.htm?pageStyle=h&ProdSort=19&page=2&idCategory=7&viewAll=yes took longer than 10.0 seconds..
+2022-01-11 12:20:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/M-LOK-Accessories-c360.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/KeyMod-Accessories-c363.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Mag-Pouches-c333.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Lights-c338.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm)
+2022-01-11 12:20:38 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/Holsters-c330.htm>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/Holsters-c330.htm took longer than 10.0 seconds..
+2022-01-11 12:20:40 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/Gunsmithing-Tools-c336.htm>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/Gunsmithing-Tools-c336.htm took longer than 10.0 seconds..
+2022-01-11 12:20:42 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.robertrtg.com/store/pc/Mag-Pouches-c333.htm?pageStyle=h&ProdSort=3&page=2&idCategory=333&viewAll=yes>
+Traceback (most recent call last):
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 1658, in _inlineCallbacks
+    cast(Failure, result).throwExceptionIntoGenerator, gen
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\python\failure.py", line 500, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\twisted\internet\defer.py", line 859, in _runCallbacks
+    current.result, *args, **kwargs
+  File "C:\Users\raccoon\AppData\Local\Programs\Python\Python37\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 355, in _cb_timeout
+    raise TimeoutError(f"Getting {url} took longer than {timeout} seconds.")
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://www.robertrtg.com/store/pc/Mag-Pouches-c333.htm?pageStyle=h&ProdSort=3&page=2&idCategory=333&viewAll=yes took longer than 10.0 seconds..
+2022-01-11 12:20:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/German-Web-Gear-c388.htm> (referer: https://www.robertrtg.com/store/pc/Holsters-Gear-Tools-c8.htm)
+2022-01-11 12:20:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-TANGO6T-1-6x24-RIFLE-SCOPE-762-SDMR-EXTENDED-RANGE-RETICLE-361p8392.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:45 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:46 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sot61234_1171_detail.jpg HTTP/1.1" 200 39496
+2022-01-11 12:20:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-ROMEO8-RED-DOT-SIGHT-BALLISTIC-CIRCLE-DOT-1x38MM-65MOA-2MOA-TITANIUM-PROTECTIVE-SHROUD-361p8891.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-ROMEO8-RED-DOT-SIGHT-BALLISTIC-CIRCLE-DOT-1x38MM-68MOA-2MOA-NO-SHROUD-361p9144.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SUREFIRE-X400-ULTRA-RED-LASER-LED-HANDGUN-OR-LONG-GUN-LIGHT-361p4245.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:46 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:47 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sor81002_928_detail.jpg HTTP/1.1" 200 95248
+2022-01-11 12:20:47 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:48 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sor81001_1212_detail.jpg HTTP/1.1" 200 115210
+2022-01-11 12:20:48 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:49 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sf-x400u-a-rd_1310_detail.jpg HTTP/1.1" 200 27382
+2022-01-11 12:20:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-ROMEO1-PRO-RED-DOT-1x30-6MOA-REFLEX-SIGHT-FDE-361p9055.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:50 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:50 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sor1p103_1171_detail.jpg HTTP/1.1" 200 51800
+2022-01-11 12:20:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-CALLAHAN-CAMO-361p9201.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:51 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:52 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-clc_nb_781_detail.jpg HTTP/1.1" 200 49635
+2022-01-11 12:20:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-BAZOOKA-GREEN-361p9202.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:52 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:53 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-bzg_nb_1445_detail.jpg HTTP/1.1" 200 46196
+2022-01-11 12:20:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-MULTICAM-361p9200.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:53 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:54 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-mcb_nb_1800_detail.jpg HTTP/1.1" 200 45828
+2022-01-11 12:20:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-GRAY-361p9205.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:54 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:55 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-ano_nb_2085_detail.jpg HTTP/1.1" 200 53150
+2022-01-11 12:20:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-FDE-361p9204.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:55 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:56 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-fde_nb_424_detail.jpg HTTP/1.1" 200 50678
+2022-01-11 12:20:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-OD-GREEN-361p9203.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:57 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 25 pages/min), scraped 0 items (at 0 items/min)
+2022-01-11 12:20:57 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:58 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-odg_nb_2176_detail.jpg HTTP/1.1" 200 48997
+2022-01-11 12:20:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/CLOUD-DEFENSIVE-OWL-1250-LUMENS-WEAPON-LIGHT-BLACK-361p9206.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:20:58 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:20:59 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/cld-owl-blk_2351_detail_999_detail.jpg HTTP/1.1" 200 50885
+2022-01-11 12:21:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-ROMEO3-RED-DOT-1x25-3MOA-REFLEX-SIGHT-WITH-RISER-361p8070.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:21:00 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:21:01 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sor31002_1932_detail_1855_detail.jpg HTTP/1.1" 200 52784
+2022-01-11 12:21:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SIG-ROMEO1-PRO-RED-DOT-1x30-6MOA-REFLEX-SIGHT-361p9016.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:21:02 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:21:03 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/sig-sor1p101_1557_detail.jpg HTTP/1.1" 200 61900
+2022-01-11 12:21:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/KAC-30MM-ONE-PIECE-SCOPE-MOUNT-BLACK-361p8500.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:21:04 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:21:05 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/arr-kac-24755-blk_nb_1615_detail.jpg HTTP/1.1" 200 45976
+2022-01-11 12:21:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/KAC-30MM-ONE-PIECE-SCOPE-MOUNT-TAUPE-361p8501.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)
+2022-01-11 12:21:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.robertrtg.com:443
+2022-01-11 12:21:06 [urllib3.connectionpool] DEBUG: https://www.robertrtg.com:443 "GET /store/pc/catalog/arr-kac-24755-tau_nb_671_detail.jpg HTTP/1.1" 200 41188
+2022-01-11 12:21:07 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-01-11 12:21:07 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2022-01-11 12:21:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.robertrtg.com/store/pc/SUREFIRE-X300U-B-ULTRA-LED-HANDGUN-OR-LONG-GUN-LIGHT-361p4243.htm> (referer: https://www.robertrtg.com/store/pc/Picatinny-Accessories-c361.htm?pageStyle=h&ProdSort=3&page=3&idCategory=361&viewAll=yes)

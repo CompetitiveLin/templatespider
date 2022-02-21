@@ -1,0 +1,74 @@
+2022-02-21 15:55:47 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-02-21 15:55:47 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-02-21 15:55:47 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'yellowstonepolaris_1645430147392.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-02-21 15:55:48 [scrapy.extensions.telnet] INFO: Telnet Password: 430998be5142a64d
+2022-02-21 15:55:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-02-21 15:55:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-02-21 15:55:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-02-21 15:55:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-02-21 15:55:48 [scrapy.core.engine] INFO: Spider opened
+2022-02-21 15:55:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-02-21 15:55:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-02-21 15:55:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.yellowstonepolaris.com/> from <GET http://yellowstonepolaris.com>
+2022-02-21 15:55:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/> (referer: None)
+2022-02-21 15:55:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-25> (referer: https://www.yellowstonepolaris.com/)
+2022-02-21 15:55:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-youth-1837443283706971689058329> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-25)
+2022-02-21 15:55:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-xtreme-performance-1837424836962897979506713> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-25)
+2022-02-21 15:55:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-wide-open-1837406390218824269955097> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-25)
+2022-02-21 15:55:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-trail-sport-1837387943474750560403481> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-25)
+2022-02-21 15:55:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/polaris-industries-snowmobile-youth-1837627751141270628597785> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-25)
+2022-02-21 15:55:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-ranger-150-efi-sage-green-28360692b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-youth-1837443283706971689058329)
+2022-02-21 15:55:58 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:55:59 [urllib3.connectionpool] DEBUG: https://cdnmedia.endeavorsuite.com:443 "GET /images/catalogs/21466/products/detail/ce194270-aed7-4418-af69-1699fe9f008b.jpg HTTP/1.1" 200 20363
+2022-02-21 15:56:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-rzr-pro-xp-premium-matte-orange-rust-28360612b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-xtreme-performance-1837424836962897979506713)
+2022-02-21 15:56:00 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:56:01 [urllib3.connectionpool] DEBUG: https://cdnmedia.endeavorsuite.com:443 "GET /images/catalogs/21466/products/detail/fe8d5a44-2edf-4723-a6e6-0ee55945be8c.jpg HTTP/1.1" 200 35822
+2022-02-21 15:56:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-rzr-pro-r-premium-polaris-blue-28540372b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-wide-open-1837406390218824269955097)
+2022-02-21 15:56:02 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:56:04 [urllib3.connectionpool] DEBUG: https://cdnmedia.endeavorsuite.com:443 "GET /images/catalogs/21466/products/detail/df7f1e36-0183-405f-b60c-f00f84647c8b.jpg HTTP/1.1" 200 38902
+2022-02-21 15:56:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-rzr-trail-570-white-lightning-28360598b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-side-x-side-rzr-trail-sport-1837387943474750560403481)
+2022-02-21 15:56:05 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:56:06 [urllib3.connectionpool] DEBUG: https://cdnmedia.endeavorsuite.com:443 "GET /images/catalogs/21466/products/detail/b3dc123c-484d-4026-bbca-10542e0e5379.jpg HTTP/1.1" 200 32611
+2022-02-21 15:56:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-120-indy-28191887b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-snowmobile-youth-1837627751141270628597785)
+2022-02-21 15:56:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:56:07 [urllib3.connectionpool] DEBUG: https://cdnmedia.endeavorsuite.com:443 "GET /images/catalogs/21277/products/detail/66951c05-384b-45f1-bca4-d7e073ef7d9f.jpg HTTP/1.1" 200 33901
+2022-02-21 15:56:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.yellowstonepolaris.com/new-models/2022-polaris-industries-550-indy-evo-121-28191886b> (referer: https://www.yellowstonepolaris.com/new-models/polaris-industries-snowmobile-youth-1837627751141270628597785)
+2022-02-21 15:56:07 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdnmedia.endeavorsuite.com:443
+2022-02-21 15:56:09 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 

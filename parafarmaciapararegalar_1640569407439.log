@@ -1,0 +1,98 @@
+2021-12-27 09:43:27 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-27 09:43:27 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-27 09:43:27 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 10,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'parafarmaciapararegalar_1640569407439.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-27 09:43:27 [scrapy.extensions.telnet] INFO: Telnet Password: d51a940adbd695ab
+2021-12-27 09:43:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-27 09:43:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-27 09:43:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-27 09:43:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-27 09:43:28 [scrapy.core.engine] INFO: Spider opened
+2021-12-27 09:43:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-27 09:43:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-27 09:43:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://parafarmaciapararegalar.com/> from <GET http://parafarmaciapararegalar.com>
+2021-12-27 09:43:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/> (referer: None)
+2021-12-27 09:43:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/39-salud-bienestar> (referer: https://parafarmaciapararegalar.com/)
+2021-12-27 09:43:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/3-cajas-regalos-originales> (referer: https://parafarmaciapararegalar.com/)
+2021-12-27 09:43:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/28-optica-online> (referer: https://parafarmaciapararegalar.com/)
+2021-12-27 09:43:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/37-ortopedia-online> (referer: https://parafarmaciapararegalar.com/)
+2021-12-27 09:43:37 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://parafarmaciapararegalar.com/medias-de-compresion/730-324-farmalastic-novum-intelligent-plus-media-larga.html#/179-intelligent_color-canela/184-talla_intelligente-talla_i> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-12-27 09:43:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/38-nutricion-y-dietetica> (referer: https://parafarmaciapararegalar.com/)
+2021-12-27 09:43:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/39-salud-bienestar?page=2> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar)
+2021-12-27 09:43:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/3-cajas-regalos-originales?page=2> (referer: https://parafarmaciapararegalar.com/3-cajas-regalos-originales)
+2021-12-27 09:43:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/optica-online/1420-gafa-presbicia-cuba-naranja-200.html> (referer: https://parafarmaciapararegalar.com/28-optica-online)
+2021-12-27 09:43:41 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:43:43 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2164-large_default/gafa-presbicia-cuba-naranja-200.jpg HTTP/1.1" 200 45839
+2021-12-27 09:43:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/37-ortopedia-online?page=2> (referer: https://parafarmaciapararegalar.com/37-ortopedia-online)
+2021-12-27 09:43:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/38-nutricion-y-dietetica?page=2> (referer: https://parafarmaciapararegalar.com/38-nutricion-y-dietetica)
+2021-12-27 09:43:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/39-salud-bienestar?page=3> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=2)
+2021-12-27 09:43:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/nuxe/1591-nuxe-cofre-simplemente-prodigioso.html> (referer: https://parafarmaciapararegalar.com/3-cajas-regalos-originales?page=2)
+2021-12-27 09:43:47 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:43:48 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2335-large_default/nuxe-cofre-simplemente-prodigioso.jpg HTTP/1.1" 200 60034
+2021-12-27 09:43:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/aceites-corporales/1233-nuxe-cofre-huile-prodigeuse-florale-100-ml.html> (referer: https://parafarmaciapararegalar.com/3-cajas-regalos-originales?page=2)
+2021-12-27 09:43:51 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:43:53 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /1928-large_default/nuxe-cofre-huile-prodigeuse-florale-100-ml.jpg HTTP/1.1" 200 39977
+2021-12-27 09:43:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/cremas-antiinflamatorias/1013-colnatur-complex-colageno-natural-con-curcuma-sabor-mediterraneo.html> (referer: https://parafarmaciapararegalar.com/38-nutricion-y-dietetica?page=2)
+2021-12-27 09:43:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/medias-de-compresion/805-535-farmalastic-novum-intelligent-plus-panty-premama-compresion-normal.html#/179-intelligent_color-canela/184-talla_intelligente-talla_i> (referer: https://parafarmaciapararegalar.com/37-ortopedia-online?page=2)
+2021-12-27 09:43:53 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:43:55 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /1645-large_default/colnatur-complex-colageno-natural-con-curcuma-sabor-mediterraneo.jpg HTTP/1.1" 200 33364
+2021-12-27 09:43:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/39-salud-bienestar?page=4> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=3)
+2021-12-27 09:43:55 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:43:56 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /1332-large_default/farmalastic-novum-intelligent-plus-panty-premama-compresion-normal.jpg HTTP/1.1" 200 22850
+2021-12-27 09:43:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/congestion-nasal/1495-otosan-nasal-spray-baby-30-ml.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=3)
+2021-12-27 09:43:59 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:01 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2236-large_default/otosan-nasal-spray-baby-30-ml.jpg HTTP/1.1" 200 74167
+2021-12-27 09:44:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/cuidados-aparato-respiratorio/1536-rinoflux-iso-spray-100-ml.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=3)
+2021-12-27 09:44:01 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:03 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2276-large_default/rinoflux-iso-spray-100-ml.jpg HTTP/1.1" 200 63798
+2021-12-27 09:44:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/congestion-nasal/1535-rinoflux-solucion-fisiologica-esteril-5-ml-20-uni.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=3)
+2021-12-27 09:44:03 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:05 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2275-large_default/rinoflux-solucion-fisiologica-esteril-5-ml-20-uni.jpg HTTP/1.1" 200 56400
+2021-12-27 09:44:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/39-salud-bienestar?page=5> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=4)
+2021-12-27 09:44:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/cuidados-sistema-urinario/1506-esi-batteril-900-10.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=3)
+2021-12-27 09:44:07 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:09 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /2246-large_default/esi-batteril-900-10.jpg HTTP/1.1" 200 41493
+2021-12-27 09:44:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/cuidados-sistema-circulatorio/780-hemoclin-gel-hemorroidal-37-gr.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=4)
+2021-12-27 09:44:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://parafarmaciapararegalar.com/salud-sexual/916-control-gel-masaje-madagascar-sweetness-efecto-calor-200-ml.html> (referer: https://parafarmaciapararegalar.com/39-salud-bienestar?page=4)
+2021-12-27 09:44:10 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:12 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /1293-large_default/hemoclin-gel-hemorroidal-37-gr.jpg HTTP/1.1" 200 22085
+2021-12-27 09:44:12 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): parafarmaciapararegalar.com:443
+2021-12-27 09:44:14 [urllib3.connectionpool] DEBUG: https://parafarmaciapararegalar.com:443 "GET /1491-large_default/control-gel-masaje-madagascar-sweetness-efecto-calor-200-ml.jpg HTTP/1.1" 200 17302
+2021-12-27 09:44:15 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-12-27 09:44:15 [scrapy.core.engine] INFO: Closing spider (shutdown)

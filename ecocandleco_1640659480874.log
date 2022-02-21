@@ -1,0 +1,140 @@
+2021-12-28 10:44:41 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-28 10:44:41 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-28 10:44:41 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 3,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'ecocandleco_1640659480874.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-28 10:44:41 [scrapy.extensions.telnet] INFO: Telnet Password: 01193c3904c14b2b
+2021-12-28 10:44:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-28 10:44:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-28 10:44:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-28 10:44:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-28 10:44:41 [scrapy.core.engine] INFO: Spider opened
+2021-12-28 10:44:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-28 10:44:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-28 10:44:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/> (referer: None)
+2021-12-28 10:44:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/> (referer: https://ecocandleco.com/)
+2021-12-28 10:44:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/> (referer: https://ecocandleco.com/)
+2021-12-28 10:44:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/> (referer: https://ecocandleco.com/)
+2021-12-28 10:44:45 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://ecocandleco.com/bath-body/back-wrap-charcoal/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-12-28 10:44:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/> (referer: https://ecocandleco.com/)
+2021-12-28 10:44:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/> (referer: https://ecocandleco.com/)
+2021-12-28 10:44:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=2> (referer: https://ecocandleco.com/home-goods/)
+2021-12-28 10:44:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=2> (referer: https://ecocandleco.com/new-seasonal/)
+2021-12-28 10:44:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=2> (referer: https://ecocandleco.com/bath-body/)
+2021-12-28 10:44:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=2> (referer: https://ecocandleco.com/home-fragrance/)
+2021-12-28 10:44:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=2> (referer: https://ecocandleco.com/candles/)
+2021-12-28 10:44:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=3> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=2)
+2021-12-28 10:44:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=3> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=2)
+2021-12-28 10:44:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=3> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=2)
+2021-12-28 10:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=3> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=2)
+2021-12-28 10:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=3> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=2)
+2021-12-28 10:45:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=4> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=3)
+2021-12-28 10:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=4> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=3)
+2021-12-28 10:45:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=4> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=3)
+2021-12-28 10:45:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=4> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=3)
+2021-12-28 10:45:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=4> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=3)
+2021-12-28 10:45:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=5> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=4)
+2021-12-28 10:45:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=5> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=4)
+2021-12-28 10:45:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=5> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=4)
+2021-12-28 10:45:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=5> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=4)
+2021-12-28 10:45:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=5> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=4)
+2021-12-28 10:45:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=6> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=5)
+2021-12-28 10:45:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=6> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=5)
+2021-12-28 10:45:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=6> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=5)
+2021-12-28 10:45:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=6> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=5)
+2021-12-28 10:45:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=6> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=5)
+2021-12-28 10:45:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=7> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=6)
+2021-12-28 10:45:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=7> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=6)
+2021-12-28 10:45:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=7> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=6)
+2021-12-28 10:45:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=7> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=6)
+2021-12-28 10:45:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=7> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=6)
+2021-12-28 10:45:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=8> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=7)
+2021-12-28 10:45:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/tea-light-10pk-winter-wonderland/> (referer: https://ecocandleco.com/new-seasonal/?sort=alphaasc&page=7)
+2021-12-28 10:45:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn11.bigcommerce.com:443
+2021-12-28 10:45:28 [urllib3.connectionpool] DEBUG: https://cdn11.bigcommerce.com:443 "GET /s-m1lvy/images/stencil/1280x1280/products/2534/9374/TEA10WWL__08260.1620847093.jpg?c=2 HTTP/1.1" 200 None
+2021-12-28 10:45:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=8> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=7)
+2021-12-28 10:45:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=8> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=7)
+2021-12-28 10:45:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=8> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=7)
+2021-12-28 10:45:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=9> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=8)
+2021-12-28 10:45:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/oil-diffuser-botanical/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=8)
+2021-12-28 10:45:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=9> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=8)
+2021-12-28 10:45:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=9> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=8)
+2021-12-28 10:45:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=9> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=8)
+2021-12-28 10:45:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=10> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=9)
+2021-12-28 10:45:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/diffuser-ultrasonic-bamboo/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=9)
+2021-12-28 10:45:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=10> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=9)
+2021-12-28 10:45:41 [scrapy.extensions.logstats] INFO: Crawled 49 pages (at 49 pages/min), scraped 0 items (at 0 items/min)
+2021-12-28 10:45:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=10> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=9)
+2021-12-28 10:45:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=10> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=9)
+2021-12-28 10:45:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=11> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=10)
+2021-12-28 10:45:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/reusable-cloths-herbs/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=10)
+2021-12-28 10:45:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=11> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=10)
+2021-12-28 10:45:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=11> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=10)
+2021-12-28 10:45:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=11> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=10)
+2021-12-28 10:45:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=12> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=11)
+2021-12-28 10:45:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/shopping-bag-cheyenne/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=11)
+2021-12-28 10:45:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/?sort=alphaasc&page=12> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=11)
+2021-12-28 10:45:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=12> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=11)
+2021-12-28 10:45:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=12> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=11)
+2021-12-28 10:45:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=13> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=12)
+2021-12-28 10:45:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/shopping-bag-the-great-wave/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=12)
+2021-12-28 10:45:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/bath-body/zinc-sunscreen-spf40-clear/> (referer: https://ecocandleco.com/bath-body/?sort=alphaasc&page=12)
+2021-12-28 10:46:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=13> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=12)
+2021-12-28 10:46:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=13> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=12)
+2021-12-28 10:46:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=14> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=13)
+2021-12-28 10:46:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/sleep-mask-rose-gold-with-dots/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=13)
+2021-12-28 10:46:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/silk-sleep-mask-purple/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=13)
+2021-12-28 10:46:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=14> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=13)
+2021-12-28 10:46:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=14> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=13)
+2021-12-28 10:46:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=15> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=14)
+2021-12-28 10:46:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/top-hat-card-glad/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=14)
+2021-12-28 10:46:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/top-hat-card-financial-burden/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=14)
+2021-12-28 10:46:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=15> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=14)
+2021-12-28 10:46:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=15> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=14)
+2021-12-28 10:46:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/?sort=alphaasc&page=16> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=15)
+2021-12-28 10:46:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/wick-trimmer/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=15)
+2021-12-28 10:46:16 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn11.bigcommerce.com:443
+2021-12-28 10:46:17 [urllib3.connectionpool] DEBUG: https://cdn11.bigcommerce.com:443 "GET /s-m1lvy/images/stencil/1280x1280/products/2701/9609/wicktrimmersilver__25686.1640282203.jpg?c=2 HTTP/1.1" 200 None
+2021-12-28 10:46:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/wick-dipper/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=15)
+2021-12-28 10:46:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdn11.bigcommerce.com:443
+2021-12-28 10:46:18 [urllib3.connectionpool] DEBUG: https://cdn11.bigcommerce.com:443 "GET /s-m1lvy/images/stencil/1280x1280/products/2702/9610/wickdippersilver__97802.1640020977.jpg?c=2 HTTP/1.1" 200 None
+2021-12-28 10:46:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-fragrance/room-linen-spray-white-tea-ginger/> (referer: https://ecocandleco.com/home-fragrance/?sort=alphaasc&page=15)
+2021-12-28 10:46:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/candles/?sort=alphaasc&page=16> (referer: https://ecocandleco.com/candles/?sort=alphaasc&page=15)
+2021-12-28 10:46:22 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-12-28 10:46:22 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2021-12-28 10:46:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ecocandleco.com/home-goods/worthwhile-card-you-did-it/> (referer: https://ecocandleco.com/home-goods/?sort=alphaasc&page=16)

@@ -1,0 +1,74 @@
+2022-01-12 10:27:12 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-12 10:27:12 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-12 10:27:12 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'skin-peel_1641954431798.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-12 10:27:12 [scrapy.extensions.telnet] INFO: Telnet Password: 02250e802b415655
+2022-01-12 10:27:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-12 10:27:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-12 10:27:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-12 10:27:12 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-12 10:27:12 [scrapy.core.engine] INFO: Spider opened
+2022-01-12 10:27:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-12 10:27:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-12 10:27:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/> (referer: None)
+2022-01-12 10:27:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Shop_By_Category_s/127.htm> (referer: https://www.skin-peel.com/)
+2022-01-12 10:27:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Skincare_Routine_s/194.htm> (referer: https://www.skin-peel.com/Shop_By_Category_s/127.htm)
+2022-01-12 10:27:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Targeted_Treatments_s/197.htm> (referer: https://www.skin-peel.com/Shop_By_Category_s/127.htm)
+2022-01-12 10:27:17 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.skin-peel.com/3_Day_Facelift_Kit_p/1101364.htm> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-01-12 10:27:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Exfoliators_Scrubs_s/196.htm> (referer: https://www.skin-peel.com/Shop_By_Category_s/127.htm)
+2022-01-12 10:27:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Anti_Aging_Serums_s/195.htm> (referer: https://www.skin-peel.com/Shop_By_Category_s/127.htm)
+2022-01-12 10:27:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Cleansers_Moisturizers_s/193.htm> (referer: https://www.skin-peel.com/Shop_By_Category_s/127.htm)
+2022-01-12 10:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Retinol_Collagen_Kit_p/1102076.htm> (referer: https://www.skin-peel.com/Skincare_Routine_s/194.htm)
+2022-01-12 10:27:21 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.skin-peel.com:443
+2022-01-12 10:27:21 [urllib3.connectionpool] DEBUG: https://www.skin-peel.com:443 "GET /v/vspfiles/photos/1102076-3.jpg?v-cache=1586956362 HTTP/1.1" 200 29668
+2022-01-12 10:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/3_Day_Facelift_Kit_p/1101364.htm> (referer: https://www.skin-peel.com/Skincare_Routine_s/194.htm)
+2022-01-12 10:27:23 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.skin-peel.com:443
+2022-01-12 10:27:23 [urllib3.connectionpool] DEBUG: https://www.skin-peel.com:443 "GET /v/vspfiles/photos/1101364-2T.jpg?v-cache=1427696060 HTTP/1.1" 200 61254
+2022-01-12 10:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Salicylic_2_1oz_p/1101554.htm> (referer: https://www.skin-peel.com/Exfoliators_Scrubs_s/196.htm)
+2022-01-12 10:27:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.skin-peel.com:443
+2022-01-12 10:27:25 [urllib3.connectionpool] DEBUG: https://www.skin-peel.com:443 "GET /v/vspfiles/photos/1101554-3.jpg?v-cache=1524142001 HTTP/1.1" 200 88355
+2022-01-12 10:27:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Vitamin_C30x_Retinol_Serum_2_pack_p/617723431105.htm> (referer: https://www.skin-peel.com/Anti_Aging_Serums_s/195.htm)
+2022-01-12 10:27:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.skin-peel.com:443
+2022-01-12 10:27:26 [urllib3.connectionpool] DEBUG: https://www.skin-peel.com:443 "GET /v/vspfiles/photos/617723431105-2T.jpg HTTP/1.1" 200 99112
+2022-01-12 10:27:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/VC30X_Retinol_Serum_p/699618016710.htm> (referer: https://www.skin-peel.com/Anti_Aging_Serums_s/195.htm)
+2022-01-12 10:27:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.skin-peel.com:443
+2022-01-12 10:27:30 [urllib3.connectionpool] DEBUG: https://www.skin-peel.com:443 "GET /v/vspfiles/photos/699618016710-2T.jpg HTTP/1.1" 200 49807
+2022-01-12 10:27:31 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-01-12 10:27:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.skin-peel.com/Vitamin_C30x_Retinol_Serum_p/1101373.htm> (referer: https://www.skin-peel.com/Anti_Aging_Serums_s/195.htm)
+2022-01-12 10:27:31 [scrapy.core.engine] INFO: Closing spider (shutdown)

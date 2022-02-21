@@ -1,0 +1,120 @@
+2022-01-05 14:21:08 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2022-01-05 14:21:08 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.19041-SP0
+2022-01-05 14:21:08 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'akomplice-clothing_1641363668059.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2022-01-05 14:21:08 [scrapy.extensions.telnet] INFO: Telnet Password: d2408cc009504d23
+2022-01-05 14:21:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-01-05 14:21:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-01-05 14:21:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-01-05 14:21:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2022-01-05 14:21:08 [scrapy.core.engine] INFO: Spider opened
+2022-01-05 14:21:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-01-05 14:21:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2022-01-05 14:21:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/> (referer: None)
+2022-01-05 14:21:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/accessories> (referer: https://www.akomplice-clothing.com/)
+2022-01-05 14:21:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/headwear> (referer: https://www.akomplice-clothing.com/)
+2022-01-05 14:21:11 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.akomplice-clothing.com/product/balance-beanie> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2022-01-05 14:21:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/bottoms> (referer: https://www.akomplice-clothing.com/)
+2022-01-05 14:21:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/button-ups-shirts> (referer: https://www.akomplice-clothing.com/)
+2022-01-05 14:21:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/outerwear> (referer: https://www.akomplice-clothing.com/)
+2022-01-05 14:21:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/accessories/page/2> (referer: https://www.akomplice-clothing.com/product-category/accessories)
+2022-01-05 14:21:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/bottoms/page/2> (referer: https://www.akomplice-clothing.com/product-category/bottoms)
+2022-01-05 14:21:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/outerwear/page/2> (referer: https://www.akomplice-clothing.com/product-category/outerwear)
+2022-01-05 14:21:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/headwear/page/2> (referer: https://www.akomplice-clothing.com/product-category/headwear)
+2022-01-05 14:21:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/button-ups-shirts/page/2> (referer: https://www.akomplice-clothing.com/product-category/button-ups-shirts)
+2022-01-05 14:21:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/accessories/page/3> (referer: https://www.akomplice-clothing.com/product-category/accessories/page/2)
+2022-01-05 14:21:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/outerwear/page/3> (referer: https://www.akomplice-clothing.com/product-category/outerwear/page/2)
+2022-01-05 14:21:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/flamingo-shorts> (referer: https://www.akomplice-clothing.com/product-category/bottoms/page/2)
+2022-01-05 14:21:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:26 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/03/FlamingoShortsBlue.jpg HTTP/1.1" 200 56233
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'\x02\x17'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: ImageLength (257) - type: short (3) - value: b'\x01\xfa'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 158 - value: b'\x00\x08\x00\x08\x00\x08'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x00\x03'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 94 - Data Location: 164 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 106 - Data Location: 172 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: Software (305) - type: string (2) Tag Location: 130 - Data Location: 180 - value: b'Adobe Photoshop CS5 Macintosh\x00'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 142 - Data Location: 210 - value: b'2013:07:02 14:47:01\x00'
+2022-01-05 14:21:26 [PIL.TiffImagePlugin] DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xe8'
+2022-01-05 14:21:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/old-era-hat> (referer: https://www.akomplice-clothing.com/product-category/headwear/page/2)
+2022-01-05 14:21:26 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:27 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/04/oldera-maroon.jpg HTTP/1.1" 200 74495
+2022-01-05 14:21:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/fused-varsity-button-up> (referer: https://www.akomplice-clothing.com/product-category/button-ups-shirts/page/2)
+2022-01-05 14:21:29 [overseaSpider.util.item_check] WARNING: 重要字段 detail_cat: button-ups-shirts 没有空格,请判断是否把字段内容中的空格清洗掉,未清洗掉请跳过
+2022-01-05 14:21:29 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:30 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/03/FuzedVarsity_Navy.jpg HTTP/1.1" 200 72826
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'\x02\x17'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: ImageLength (257) - type: short (3) - value: b'\x01\xfa'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 158 - value: b'\x00\x08\x00\x08\x00\x08'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x00\x03'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 94 - Data Location: 164 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 106 - Data Location: 172 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: Software (305) - type: string (2) Tag Location: 130 - Data Location: 180 - value: b'Adobe Photoshop CS5 Macintosh\x00'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 142 - Data Location: 210 - value: b'2013:07:02 14:41:53\x00'
+2022-01-05 14:21:30 [PIL.TiffImagePlugin] DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xe8'
+2022-01-05 14:21:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/portlander-jacket> (referer: https://www.akomplice-clothing.com/product-category/outerwear/page/3)
+2022-01-05 14:21:30 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:31 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/04/Capture-1.jpg HTTP/1.1" 200 31496
+2022-01-05 14:21:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product-category/accessories/page/4> (referer: https://www.akomplice-clothing.com/product-category/accessories/page/3)
+2022-01-05 14:21:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/cord-hooded-varsity> (referer: https://www.akomplice-clothing.com/product-category/outerwear/page/3)
+2022-01-05 14:21:33 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:34 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/04/cord-tan.jpg HTTP/1.1" 200 63801
+2022-01-05 14:21:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.akomplice-clothing.com/product/ak-team-knit> (referer: https://www.akomplice-clothing.com/product-category/outerwear/page/3)
+2022-01-05 14:21:34 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.akomplice-clothing.com:443
+2022-01-05 14:21:35 [urllib3.connectionpool] DEBUG: https://www.akomplice-clothing.com:443 "GET /vsop/wp-content/uploads/2020/03/teamknit1.jpg HTTP/1.1" 200 56552
+2022-01-05 14:21:35 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'\x02\x17'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: ImageLength (257) - type: short (3) - value: b'\x01\xfa'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 158 - value: b'\x00\x08\x00\x08\x00\x08'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x00\x03'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 94 - Data Location: 164 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 106 - Data Location: 172 - value: b"\x00\n\xfc\x80\x00\x00'\x10"
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: Software (305) - type: string (2) Tag Location: 130 - Data Location: 180 - value: b'Adobe Photoshop CS6 (Macintosh)\x00'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 142 - Data Location: 212 - value: b'2013:03:04 15:48:43\x00'
+2022-01-05 14:21:35 [PIL.TiffImagePlugin] DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xe8'
+2022-01-05 14:21:35 [scrapy.core.engine] INFO: Closing spider (shutdown)

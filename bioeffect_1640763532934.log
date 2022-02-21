@@ -1,0 +1,72 @@
+2021-12-29 15:38:53 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-29 15:38:53 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-29 15:38:53 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'bioeffect_1640763532934.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-29 15:38:53 [scrapy.extensions.telnet] INFO: Telnet Password: 0ab041283d72c131
+2021-12-29 15:38:53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-29 15:38:53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-29 15:38:53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-29 15:38:53 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-29 15:38:53 [scrapy.core.engine] INFO: Spider opened
+2021-12-29 15:38:53 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-29 15:38:53 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-29 15:38:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/> (referer: None)
+2021-12-29 15:38:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products> (referer: https://www.bioeffect.com/)
+2021-12-29 15:38:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products/bioeffect-tote-bag> (referer: https://www.bioeffect.com/products)
+2021-12-29 15:38:57 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.prismic.io:443
+2021-12-29 15:38:59 [urllib3.connectionpool] DEBUG: https://images.prismic.io:443 "GET /bioeffect/b932dc63-597c-46a1-a72a-00cd10ac4765_Tote+bag_Product+page+-+packshots-final.png?auto=format%2C+compress&rect=0%2C0%2C1122%2C1999&w=850&h=1514 HTTP/1.1" 200 582012
+2021-12-29 15:38:59 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-29 15:38:59 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-29 15:38:59 [PIL.PngImagePlugin] DEBUG: STREAM b'PLTE' 54 768
+2021-12-29 15:38:59 [PIL.PngImagePlugin] DEBUG: STREAM b'tRNS' 834 256
+2021-12-29 15:38:59 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 1102 8192
+2021-12-29 15:39:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products/egf-serum-case> (referer: https://www.bioeffect.com/products)
+2021-12-29 15:39:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products/bioeffect-skincare-bag> (referer: https://www.bioeffect.com/products)
+2021-12-29 15:39:00 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.prismic.io:443
+2021-12-29 15:39:02 [urllib3.connectionpool] DEBUG: https://images.prismic.io:443 "GET /bioeffect/32216259-ca5e-46c1-af5d-1fc4a3a85150_Summer_GWP_packshot-cropped.jpg?auto=format%2C+compress&rect=0%2C0%2C2016%2C3082&w=850&h=1300 HTTP/1.1" 200 69397
+2021-12-29 15:39:02 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.prismic.io:443
+2021-12-29 15:39:05 [urllib3.connectionpool] DEBUG: https://images.prismic.io:443 "GET /bioeffect/3caa77e3-6531-4755-9eca-ead5def22f69_SPRING_PROMO_BAG_4000x4000px.jpg?auto=format%2C+compress&rect=0%2C0%2C4000%2C4000&w=850&h=850 HTTP/1.1" 200 20653
+2021-12-29 15:39:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products/bioeffect-repair-collection> (referer: https://www.bioeffect.com/products)
+2021-12-29 15:39:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.prismic.io:443
+2021-12-29 15:39:08 [urllib3.connectionpool] DEBUG: https://images.prismic.io:443 "GET /bioeffect/adfedbaf-3d13-4821-aef5-1432ea2ba10a_Collection3_Product+page+-+packshots-final.png?auto=format%2C+compress&rect=0%2C0%2C2290%2C1685&w=850&h=626 HTTP/1.1" 200 34602
+2021-12-29 15:39:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.bioeffect.com/products/bioeffect-prevent-collection> (referer: https://www.bioeffect.com/products)
+2021-12-29 15:39:09 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): images.prismic.io:443
+2021-12-29 15:39:10 [urllib3.connectionpool] DEBUG: https://images.prismic.io:443 "GET /bioeffect/c260cc01-24af-40e0-b24c-28de8cac8fa0_Collection2_Product+page+-+packshots-final.png?auto=format%2C+compress&rect=0%2C0%2C1788%2C1459&w=850&h=694 HTTP/1.1" 200 39484
+2021-12-29 15:39:11 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2021-12-29 15:39:11 [scrapy.core.engine] INFO: Closing spider (shutdown)

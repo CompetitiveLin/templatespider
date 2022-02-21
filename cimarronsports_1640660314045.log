@@ -1,0 +1,93 @@
+2021-12-28 10:58:34 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: overseaSpider)
+2021-12-28 10:58:34 [scrapy.utils.log] INFO: Versions: lxml 4.7.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.7.8 (tags/v3.7.8:4b47a5b6ba, Jun 28 2020, 08:53:46) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform Windows-10-10.0.17763-SP0
+2021-12-28 10:58:34 [scrapy.crawler] INFO: Overridden settings:
+{'ASYNCIO_EVENT_LOOP': 'asyncio.SelectorEventLoop',
+ 'BOT_NAME': 'overseaSpider',
+ 'CLOSESPIDER_ITEMCOUNT': 5,
+ 'COMMANDS_MODULE': 'overseaSpider.commands',
+ 'CONCURRENT_REQUESTS': 4,
+ 'DOWNLOAD_DELAY': 1,
+ 'DOWNLOAD_TIMEOUT': 10,
+ 'HTTPCACHE_EXPIRATION_SECS': 604800,
+ 'HTTPCACHE_IGNORE_HTTP_CODES': [403, 301, 401, 500, 503],
+ 'HTTPCACHE_POLICY': 'overseaSpider.middlewares.DummyPolicy',
+ 'LOG_FILE': 'cimarronsports_1640660314045.log',
+ 'NEWSPIDER_MODULE': 'overseaSpider.spiders',
+ 'RETRY_ENABLED': False,
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['overseaSpider.spiders'],
+ 'TEMPLATES_DIR': 'D:\\work\\overseaspider\\overseaSpider\\templates'}
+2021-12-28 10:58:34 [scrapy.extensions.telnet] INFO: Telnet Password: 357405a36d93105c
+2021-12-28 10:58:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2021-12-28 10:58:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['overseaSpider.middlewares.OverseaspiderUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-12-28 10:58:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-12-28 10:58:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['overseaSpider.pipelines.OverseaspiderPipeline']
+2021-12-28 10:58:34 [scrapy.core.engine] INFO: Spider opened
+2021-12-28 10:58:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-12-28 10:58:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-12-28 10:58:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/> (referer: None)
+2021-12-28 10:58:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000193/clearance/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/pages/instructions/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/faq/faq-baseball/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/pages/installations/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000179/more-sports/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000052/specials/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000047/golf/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000041/softball/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:58:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000046/baseball/> (referer: https://www.cimarronsports.com/)
+2021-12-28 10:59:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000049/soccer/> (referer: https://www.cimarronsports.com/productcategories/100000179/more-sports/)
+2021-12-28 10:59:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000152/soccer-specials/> (referer: https://www.cimarronsports.com/productcategories/100000052/specials/)
+2021-12-28 10:59:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000203/frame-replacement-parts/> (referer: https://www.cimarronsports.com/productcategories/100000047/golf/)
+2021-12-28 10:59:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000201/frame-replacement-parts/> (referer: https://www.cimarronsports.com/productcategories/100000041/softball/)
+2021-12-28 10:59:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000202/frame-replacement-parts/> (referer: https://www.cimarronsports.com/productcategories/100000046/baseball/)
+2021-12-28 10:59:08 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://www.cimarronsports.com/products/22539/1%2d1%2dhalf%2dinch%2dstand%2dalone%2dframe%2dreplacement%2dpart/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2021-12-28 10:59:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000084/training-aids/> (referer: https://www.cimarronsports.com/productcategories/100000046/baseball/)
+2021-12-28 10:59:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/productcategories/100000083/field-equipment/> (referer: https://www.cimarronsports.com/productcategories/100000046/baseball/)
+2021-12-28 10:59:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22536/masters%2dframe%2dreplacement%2dparts/> (referer: https://www.cimarronsports.com/productcategories/100000203/frame-replacement-parts/)
+2021-12-28 10:59:15 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
+2021-12-28 10:59:16 [urllib3.connectionpool] DEBUG: https://www.cimarronsports.com:443 "GET //includes/images/products/22536/large/2-way-corner_800.jpg HTTP/1.1" 200 156127
+2021-12-28 10:59:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22540/deluxe%2dcommercial%2dframe%2dparts/> (referer: https://www.cimarronsports.com/productcategories/100000201/frame-replacement-parts/)
+2021-12-28 10:59:17 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
+2021-12-28 10:59:18 [urllib3.connectionpool] DEBUG: https://www.cimarronsports.com:443 "GET //includes/images/products/22540/large/deluxe-2-way-elbow_1000.jpg HTTP/1.1" 200 162314
+2021-12-28 10:59:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22538/2%2dinch%2dstand%2dalone%2dframe%2dreplacement%2dpart/> (referer: https://www.cimarronsports.com/productcategories/100000201/frame-replacement-parts/)
+2021-12-28 10:59:19 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
+2021-12-28 10:59:20 [urllib3.connectionpool] DEBUG: https://www.cimarronsports.com:443 "GET //includes/images/products/22538/large/2-inch-stand-alone-3-way_PART-A_1000.jpg HTTP/1.1" 200 186643
+2021-12-28 10:59:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22425/tanner%2dtee%2d%2d%2dthe%2doriginal/> (referer: https://www.cimarronsports.com/productcategories/100000084/training-aids/)
+2021-12-28 10:59:21 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
+2021-12-28 10:59:22 [urllib3.connectionpool] DEBUG: https://www.cimarronsports.com:443 "GET //includes/images/products/22425/large/product-tanner-traditional-adult.png HTTP/1.1" 200 85727
+2021-12-28 10:59:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-28 10:59:23 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-28 10:59:23 [PIL.PngImagePlugin] DEBUG: STREAM b'gAMA' 54 4
+2021-12-28 10:59:23 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 70 9
+2021-12-28 10:59:23 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 91 65445
+2021-12-28 10:59:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22470/tanner%2dtee%2dpro/> (referer: https://www.cimarronsports.com/productcategories/100000084/training-aids/)
+2021-12-28 10:59:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
+2021-12-28 10:59:24 [urllib3.connectionpool] DEBUG: https://www.cimarronsports.com:443 "GET //includes/images/products/22470/large/product-tanner-pro-adult.png HTTP/1.1" 200 75165
+2021-12-28 10:59:25 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2021-12-28 10:59:25 [PIL.PngImagePlugin] DEBUG: STREAM b'sRGB' 41 1
+2021-12-28 10:59:25 [PIL.PngImagePlugin] DEBUG: STREAM b'gAMA' 54 4
+2021-12-28 10:59:25 [PIL.PngImagePlugin] DEBUG: STREAM b'pHYs' 70 9
+2021-12-28 10:59:25 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 91 65445
+2021-12-28 10:59:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.cimarronsports.com/products/22471/tanner%2dtee%2dpro/> (referer: https://www.cimarronsports.com/productcategories/100000084/training-aids/)
+2021-12-28 10:59:26 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.cimarronsports.com:443
