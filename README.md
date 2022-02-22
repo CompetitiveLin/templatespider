@@ -20,7 +20,7 @@ python语法整理：
 16. 网页的源码有时候会和f12打开的elements里的内容不一样，以网页源码为准！
 17. 在执行scrapy中的run函数（其实就相当于在命令行里打scrapy crawl xxx），会把所有爬虫脚本先加载一遍，如果在脚本文件夹里不添加（if __name__ == '__main__':）代码段，则也会执行相应代码，详见yield_test.py
 18. post函数，例如response = requests.post('http://20.81.114.208:9426/search_name', data=data, verify=False)，如果在postman里模拟请求，data则是在body里添加，并非parameter
-19. 修改.gitignore后，把原上传的文件删除，使用以下命令，git rm -r –cached . #清除缓存 git add . #重新按照ignore的规则add所有的文件 git commit -m “update .gitignore” #提交和注释
+19. 修改.gitignore后，把原上传的文件删除，使用以下命令，git rm -r --cached . #清除缓存，并且注意有一个点 git add . #重新按照ignore的规则add所有的文件 git commit -m “update .gitignore” #提交和注释
 20. 
 21. 
 
