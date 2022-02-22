@@ -6,7 +6,6 @@ import json
 import time
 import scrapy
 import requests
-import numpy as np
 from hashlib import md5
 from scrapy.selector import Selector
 from overseaSpider.items import ShopItem, SkuAttributesItem, SkuItem
