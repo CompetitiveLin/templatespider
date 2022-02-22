@@ -7,9 +7,9 @@ import scrapy
 import requests
 from hashlib import md5
 from urllib import parse
-from ..util.utils import isLinux, filter_text
-from ..items import ShopItem, SkuAttributesItem, SkuItem
-from ..expands import MysqlParseSpider
+from overseaSpider.util.utils import isLinux, filter_text
+from overseaSpider.items import ShopItem, SkuAttributesItem, SkuItem
+from overseaSpider.expands import MysqlParseSpider
 
 website = 'jpcycles'
 # 浏览器渲染解析脚本

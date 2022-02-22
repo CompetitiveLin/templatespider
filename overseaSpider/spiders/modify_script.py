@@ -36,7 +36,7 @@ def update(name, Type, reason):
     response = requests.post('http://20.81.114.208:9426/save_log', data=data, verify=False)
     print(response.json())
 
-if __name__ == '__main__':
+if __name__ == '__main_':
     # 更新错误脚本的状态
     update(name='', Type=3, reason='')
     # 查看自己待修改更新的脚本名
