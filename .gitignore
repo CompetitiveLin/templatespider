@@ -1,7 +1,7 @@
 blm/
 .scrapy/
 log/*
-!.gitkeep
+!log/.gitkeep
 !README.md
 venv
 .env

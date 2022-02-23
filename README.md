@@ -32,7 +32,7 @@ git commit -m "update .gitignore"    #提交和注释
 13. s= [None]，type(s)为list，并非NoneType
 14. join()的用法, `items["detail_cat"] = '/'.join(cat_list)`，列表里的元素拼接起来，并在每两个元素中间添加一个字符'/'
 15. 函数`response.text`（没有括号）得到的是该网页的源码
-16. pycharm里debug的使用！
+16. Pycharm里debug的使用！
 17. 网页的源码有时候会和f12打开的elements里的内容不一样，以网页源码为准！
 18. 在执行scrapy中的run函数（其实就相当于在命令行里打scrapy crawl xxx），会把所有爬虫脚本先加载一遍，如果在脚本文件夹里不添加`if __name__ == '__main__':`代码段，则也会执行相应代码，详见`yield_test.py`
 19. post函数，例如`response = requests.post('http://20.81.114.208:9426/search_name', data=data, verify=False)`，如果在postman里模拟请求，data则是在body里添加，并非parameter
@@ -51,20 +51,27 @@ pip freeze > requirements.txt
 .DS_Store          #忽略当前文件夹下的.DS_Store文件
 */.DS_Store        #忽略所有子目录下的.DS_Store
 *.a                #忽略所有的.a文件
-!test.a            #否定忽略test.a文件, 即时前面忽略了所有的.a文件
+!test.a            #否定忽略test.a文件, 即使前面忽略了所有的.a文件
 build/             #忽略根目录下的build文件夹
 foo/*              #忽略foo文件夹下面的所有目录, 不管是根目录下的/foo/, 还是子目录下的 /child/foo/
 /foo/*             #忽略根目录下foo下的所有目录
 /TOOD              #忽略当前文件夹下的TOOD, 不包括子目录下的/child/TOOD
 doc/*.txt          #忽略/doc/test.txt,不能忽略/doc/test/test.txt
 
-#有一种写法
+#另外一种写法
 /*                 #忽略全部,但是不忽略.gitignore, 不忽略 foo和bar文件夹
 !.gitignore
 !/foo
 !/bar
 ```
-23. To be continued...
+23. Pycharm里"mark as excluded from indexing and search"，意思是从索引和搜索中排除，在索引或搜索会将这些文件夹排除在外，可减少资源的使用。当某个文件夹被排除时，在Pycharm左侧工程目录里，该文件夹所在行的背景色为浅黄色，文件夹图标变成红色。可通过右击文件夹，选择Mark Directory as手动设置排除文件夹。
+24. Pycharm文件名颜色含义：
+* 绿色：已经加入版本控制暂未提交
+* 红色：未加入版本控制
+* 蓝色：加入版本控制，已提交，有改动
+* 白色：加入版本控制，已提交，无改动
+* 灰色：版本控制已忽略文件
+25. To be continued...
 
 
 
