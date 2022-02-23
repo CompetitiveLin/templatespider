@@ -6,3 +6,4 @@ log/*
 venv
 .env
 .idea
+__pycache__
