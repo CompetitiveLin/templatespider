@@ -1,2 +1,3 @@
-s = [None]
-print(type(s))
+if __name__ == '__main__':
+    s = [None]
+    print(type(s))

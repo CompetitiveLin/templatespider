@@ -16,14 +16,14 @@ from overseaSpider.util.utils import isLinux
 # !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 '''=================================================
-@Project -> File   ：templatespider -> yellowstonepolaris
+@Project -> File   ：templatespider -> with_html_filter
 @IDE    ：PyCharm
 @Author ：Mr. Tutou
-@Date   ：2022/2/21 10:00
+@Date   ：2022/2/22 14:15
 @Desc   ：
 =================================================='''
 
-website = 'yellowstonepolaris'
+website = 'with_html_filter'
 
 
 def get_sku_price(product_id, attribute_list):
@@ -46,8 +46,8 @@ def convert(price):
 
 class ThecrossdesignSpider(scrapy.Spider):
     name = website
-    allowed_domains = ['yellowstonepolaris.com']
-    start_urls = ['http://yellowstonepolaris.com']
+    allowed_domains = ['thecrossdesign.com']
+    start_urls = ['https://www.thecrossdesign.com/']
 
     @classmethod
     def update_settings(cls, settings):
@@ -127,44 +127,38 @@ class ThecrossdesignSpider(scrapy.Spider):
 
     def parse(self, response):
         """获取全部分类"""
-        category_urls = ['https://www.yellowstonepolaris.com/new-models/polaris-industries-25']
+        category_urls = response.xpath('//li[@class="navPage-childList-item"]/a/@href').getall()
         for category_url in category_urls:
             yield scrapy.Request(url=category_url, callback=self.parse_list)
 
     def parse_list(self, response):
         """商品列表页"""
-        detail_url_list = response.xpath('//div[@class="flexbox-ie-fix"]/a[1]/@href').getall()
+        detail_url_list = response.xpath('//ul[@class="productGrid "]/li/a/@href').getall()
         for detail_url in detail_url_list:
-            detail_url = response.urljoin(detail_url)
-            yield scrapy.Request(url=detail_url, callback=self.parse_list1)
-
-    def parse_list1(self, response):
-        """商品列表页"""
-        detail_url_list = response.xpath('//div[@class="showcase-unit showcase-grow"]/a/@href').getall()
-        for detail_url in detail_url_list:
-            detail_url = response.urljoin(detail_url)
             yield scrapy.Request(url=detail_url, callback=self.parse_detail)
-
+        next_page_url = response.xpath('//li[@class="pagination-item pagination-item--next"]/a/@href').get()
+        if next_page_url:
+            yield scrapy.Request(url=next_page_url, callback=self.parse_list)
 
     def parse_detail(self, response):
         """详情页"""
         items = ShopItem()
         items["url"] = response.url
 
-        items["current_price"] = self.price_fliter(response.xpath('//span[@itemprop="price"]/text()').get())
+        items["current_price"] = self.price_fliter(response.xpath('//div[@class="BasicText Widget"]/text()').get())
         price = response.xpath('//div[@class="BasicText lineThrough"]/text()').get()
-        items["original_price"] = self.price_fliter(price).replace(',', '') if price else items["current_price"]
+        items["original_price"] = self.price_fliter(price) if price else items["current_price"]
 
-        name = response.xpath('//h1[@itemprop="name"]/text()').get().strip()
+        name = response.xpath('//h1[@class="productView-title"]/text()').get().strip()
         items["name"] = name
 
-        cat_list = response.xpath('//li[@itemprop="itemListElement"]/a/span/text()').getall()
+        cat_list = response.xpath('//ul[@class="breadcrumbs"]/li/a/text()').getall()
         if cat_list:
             cat_list = [cat.strip() for cat in cat_list if cat.strip()]
             items["cat"] = cat_list[-1]
             items["detail_cat"] = '/'.join(cat_list)
 
-        description = response.xpath('//div[@class="primaryProductDescription"]/p/text()').getall()
+        description = response.xpath('//div[@id="productView_description"]').getall()
         items["description"] = self.filter_text(self.filter_html_label(''.join(description)))
         items["source"] = self.allowed_domains[0]
 
@@ -175,14 +169,11 @@ class ThecrossdesignSpider(scrapy.Spider):
         #     attribute.append(attr1_list[a]+":"+attr2_list[a])
         # items["attributes"] = attribute
 
-        images_list = response.xpath('//div[@class="inventory-gallery-viewport"]/div/a/@href').getall()
-        if not images_list:
-            images_list = response.xpath('//div[@class="unit-image-container"]/a/@href').getall()
-        images_list = ['https:' + url for url in images_list]
+        images_list = response.xpath('//ul[@class="productView-thumbnails"]/li/a/@href').getall()
         items["images"] = images_list
         items["brand"] = ''
 
-        opt_name = ''
+        opt_name = response.xpath('//div[@class="product-variants"]/div/span/text()').getall()
         if not opt_name:
             items["sku_list"] = []
             # return
@@ -247,6 +238,6 @@ class ThecrossdesignSpider(scrapy.Spider):
         items["updated"] = int(time.time())
         items['is_deleted'] = 0
         item_check.check_item(items)
-        detection_main(items = items,website = website,num=self.settings["CLOSESPIDER_ITEMCOUNT"],skulist=True,skulist_attributes=True)
-        # print(items)
+        # detection_main(items = items,website = website,num=self.settings["CLOSESPIDER_ITEMCOUNT"],skulist=True,skulist_attributes=True)
+        print(items)
         # yield items

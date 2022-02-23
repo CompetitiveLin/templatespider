@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import itertools
 import re
 import json
 import time
@@ -81,6 +82,18 @@ class ArtSpider(scrapy.Spider):
         text = text.replace('\n', '').replace('\r', '').replace('\t', '').replace('  ', '').strip()
         return text
 
+    def price_fliter(self, input_text):
+        input_text = re.sub(r'[\t\n\r\f\v]', ' ', input_text)
+        input_text = re.sub(r'<.*?>', ' ', input_text)
+        filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
+                       u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
+                       u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
+                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n',
+                       '¥']
+        for index in filter_list:
+            input_text = input_text.replace(index, "").strip()
+        return input_text
+
     def start_requests(self):
         url_list = [
             "https://www.art.com/shop/art-subjects/"
@@ -131,13 +144,13 @@ class ArtSpider(scrapy.Spider):
         """详情页"""
         items = ShopItem()
         items["url"] = response.url
-        original_price = response.xpath("//div[@class='products-wrapper']/button//div[@class='price']/text()").get()
-        current_price = response.xpath("//div[@class='products-wrapper']/button//div[@class='price']/text()").get()
-        items["original_price"] = "" + str(original_price) if original_price else "" + str(current_price)
-        items["current_price"] = "" + str(current_price) if current_price else "" + str(original_price)
+        original_price = response.xpath('//div[@class="Price_price__16GR6 ProductDetailsSidebar_atc-price-text__1VWw6"]/text()').get()
+        current_price = response.xpath('//div[@class="Price_price__16GR6 ProductDetailsSidebar_atc-price-text__1VWw6"]/text()').get()
+        items["original_price"] = self.price_fliter(original_price)
+        items["current_price"] = self.price_fliter(current_price)
 
-        items["brand"] = response.xpath("//a[@class='artist-title']/text()").get()
-        items["name"] = response.xpath('//h1[@itemprop="name"]/text()').get()
+        items["brand"] = 'art'
+        items["name"] = response.xpath('//h1[@class="ProductDetailsSidebarHeader_art_title__2W2hV"]/text()').get()
         # attributes = list()
         # items["attributes"] = attributes
         description = response.xpath("//div[@class='product-content']//text()").getall()
@@ -147,25 +160,66 @@ class ArtSpider(scrapy.Spider):
         # items["care"] = response.xpath("").get()
         # items["sales"] = response.xpath("").get()
         items["source"] = website
-        images_list = response.xpath('//div[@class="hero-zoom-wrapper"]/img/@src').getall()
+        images_list = response.xpath('//button[@aria-label="Product image"]/img/@src').getall()
         items["images"] = images_list
+        cat_list = response.xpath('//ol[@class="list-unstyled BreadCrumbs_breadcrumb__16zAx"]/li/a/text()').getall()
+        if cat_list:
+            cat_list = [cat.strip() for cat in cat_list if cat.strip()]
+            items["cat"] = cat_list[-1]
+            items["detail_cat"] = '/'.join(cat_list)
 
-        items["cat"] = 'art'
-        items["detail_cat"] = 'art'
 
-        size_list = response.xpath('//div[contains(@class,"size-button")]/text()').getall()
+        opt_name = response.xpath('//div[@class="product-variants"]/div/span/text()').getall()
+        if not opt_name:
+            items["sku_list"] = []
+            # return
+        else:
+            opt_name = [name.replace(':', '').strip() for name in opt_name if name.strip()]
+            opt_value = []
+            # print(opt_name)
+            opt_length = len(opt_name)
+            for i in range(opt_length):
+                value_temp = response.xpath('//div[@class="product-variants"]/div[' + str(
+                    i + 1) + ']/ul/li/label/span/text()').getall()
+                if not value_temp:
+                    value_temp = response.xpath('//div[@class="product-variants"]/div[' + str(
+                        i + 1) + ']/select[@class="form-control form-control-select"]/option/text()').getall()
+                if value_temp:
+                    opt_value.append(value_temp)
 
-        sku_list = list()
-        for size in size_list:
-            sku_item = SkuItem()
-            sku_item["original_price"] = items["original_price"]
-            sku_item["current_price"] = items["current_price"]
-            attributes = SkuAttributesItem()
-            attributes["size"] = size
-            sku_item["attributes"] = attributes
-            sku_list.append(sku_item)
+            # print(opt_value)
+            attrs_list = []
+            for opt in itertools.product(*opt_value):
+                temp = dict()
+                for i in range(len(opt)):
+                    temp[opt_name[i]] = opt[i]
+                if len(temp):
+                    attrs_list.append(temp)
+            # print(attrs_list)
 
-        items["sku_list"] = sku_list
+            sku_list = list()
+            for attrs in attrs_list:
+                sku_info = SkuItem()
+                sku_attr = SkuAttributesItem()
+                other_temp = dict()
+
+                for attr in attrs.items():
+                    if attr[0] == 'Size':
+                        sku_attr["size"] = attr[1]
+                    elif attr[0] == 'Color':
+                        sku_attr["colour"] = attr[1]
+                    else:
+                        other_temp[attr[0]] = attr[1]
+                if len(other_temp):
+                    sku_attr["other"] = other_temp
+
+                sku_info["current_price"] = items["current_price"]
+                sku_info["original_price"] = items["original_price"]
+                sku_info["url"] = response.url
+                sku_info["attributes"] = sku_attr
+                sku_list.append(sku_info)
+            items["sku_list"] = sku_list
+
         items["measurements"] = ["Weight: None", "Height: None", "Length: None", "Depth: None"]
         status_list = list()
         status_list.append(items["url"])
@@ -180,5 +234,5 @@ class ArtSpider(scrapy.Spider):
         items["updated"] = int(time.time())
         items['is_deleted'] = 0
 
-        print(items)
-        # yield items
+        # print(items)
+        yield items

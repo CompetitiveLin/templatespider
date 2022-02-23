@@ -471,7 +471,7 @@ def detection_main(items, website, num, skulist=True, skulist_attributes=True):
         if is_preserve == False:
             is_preserve = True
             t = int(time.time() * 1000)
-            with open(website + "_" + str(t) + ".txt", "a+", encoding="utf-8") as file:
+            with open("log/" + website + "_" + str(t) + ".txt", "a+", encoding="utf-8") as file:
                 file.write(json.dumps(json.loads(demjson.encode(detection_result_list)), ensure_ascii=False))
             print("【检测文件】保存完毕！")
 
