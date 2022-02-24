@@ -12,23 +12,20 @@ from overseaSpider.items import ShopItem, SkuAttributesItem, SkuItem
 from overseaSpider.util import item_check
 from overseaSpider.util.scriptdetection import detection_main
 from overseaSpider.util.utils import isLinux
-
-# !/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 '''=================================================
-@Project -> File   ：templatespider -> template_file
-@IDE    ：PyCharm
+@Project -> File   ：${PROJECT_NAME} -> ${NAME}
+@IDE    ：${PRODUCT_NAME}
 @Author ：Mr. Tutou
-@Date   ：2022/2/24 15:28
+@Date   ：${DATE} ${TIME}
 @Desc   ：
 =================================================='''
 
-website = 'template_file'
-
+website = '${NAME}'
 
 def convert(price):
     return '{:.2f}'.format(price)
-
 
 class ThecrossdesignSpider(scrapy.Spider):
     name = website
@@ -94,8 +91,7 @@ class ThecrossdesignSpider(scrapy.Spider):
         filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
                        u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
                        u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
-                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n',
-                       '¥']
+                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n', '¥']
         for index in filter_list:
             input_text = input_text.replace(index, "").strip()
         return input_text
@@ -106,7 +102,7 @@ class ThecrossdesignSpider(scrapy.Spider):
         filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
                        u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
                        u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
-                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€']
+                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ','$', '€']
         for index in filter_list:
             input_text = input_text.replace(index, "").strip()
         return input_text

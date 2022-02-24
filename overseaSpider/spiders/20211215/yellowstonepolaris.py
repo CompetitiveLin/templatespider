@@ -164,8 +164,8 @@ class ThecrossdesignSpider(scrapy.Spider):
             items["cat"] = cat_list[-1]
             items["detail_cat"] = '/'.join(cat_list)
 
-        description = response.xpath('//div[@class="primaryProductDescription"]/p/text()').getall()
-        items["description"] = self.filter_text(self.filter_html_label(''.join(description)))
+        description = response.xpath('//div[@class="productDescription"]//text()').getall()
+        items["description"] = self.filter_text(self.filter_html_label(' '.join(description)))
         items["source"] = self.allowed_domains[0]
 
         # attr1_list = response.xpath('//div[@class="single-car-data"]/table//tr/td[1]/text()').getall()

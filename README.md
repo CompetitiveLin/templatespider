@@ -27,7 +27,14 @@ git commit -m "update .gitignore"    #提交和注释
 ```
 9. scrapy库中`response.urljoin('')`,`response.xpath('').get()`
 10. yield生成器的使用，具体参考`yield_test.py`文件
-11. xpath的一些语法，（有待更新）
+11. xpath中定位元素的父、兄弟节点，可参考 [链接](https://blog.csdn.net/hb5cn/article/details/84937449?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_aa&utm_relevant_index=2) ：
+```commandline
+parent::                  #父节点
+following-sibling::       #兄节点
+preceding-sibling::       #弟节点，两者区别在于向后定位还是向前定位
+//A[text()='a']/parent::B/preceding-sibling::C  # 内容为a的A标签的父亲标签B，与该B标签同级别往前找C标签
+//A[text()='a']/parent::B/following-sibling::C  # 内容为a的A标签的父亲标签B，与该B标签同级别往后找C标签
+```
 12. `demjson.decode()`和`json.loads()`（解析字符串）和`json.load()`（解析文件）的区别：A、可解析不规则的json数据，B、解析规则的字符串，C、解析文件里的json数据
 13. s= [None]，type(s)为list，并非NoneType
 14. join()的用法, `items["detail_cat"] = '/'.join(cat_list)`，列表里的元素拼接起来，并在每两个元素中间添加一个字符'/'
