@@ -12,25 +12,28 @@ from overseaSpider.items import ShopItem, SkuAttributesItem, SkuItem
 from overseaSpider.util import item_check
 from overseaSpider.util.scriptdetection import detection_main
 from overseaSpider.util.utils import isLinux
-#!/usr/bin/env python
+
+# !/usr/bin/env python
 # -*- coding: UTF-8 -*-
 '''=================================================
-@Project -> File   ：${PROJECT_NAME} -> ${NAME}
-@IDE    ：${PRODUCT_NAME}
+@Project -> File   ：templatespider -> desenio
+@IDE    ：PyCharm
 @Author ：Mr. Tutou
-@Date   ：${DATE} ${TIME}
+@Date   ：2022/2/25 14:21
 @Desc   ：
 =================================================='''
 
-website = '${NAME}'
+website = 'desenio'
+
 
 def convert(price):
     return '{:.2f}'.format(price)
 
+
 class ThecrossdesignSpider(scrapy.Spider):
     name = website
-    allowed_domains = ['thecrossdesign.com']
-    start_urls = ['https://www.thecrossdesign.com/']
+    allowed_domains = ['desenio.com.au']
+    start_urls = ['https://desenio.com.au/']
 
     @classmethod
     def update_settings(cls, settings):
@@ -91,7 +94,8 @@ class ThecrossdesignSpider(scrapy.Spider):
         filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
                        u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
                        u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
-                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n', '¥']
+                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€', ',', '\n',
+                       '¥']
         for index in filter_list:
             input_text = input_text.replace(index, "").strip()
         return input_text
@@ -102,23 +106,23 @@ class ThecrossdesignSpider(scrapy.Spider):
         filter_list = [u'\x85', u'\xa0', u'\u1680', u'\u180e', u'\u2000-', u'\u200a',
                        u'\u2028', u'\u2029', u'\u202f', u'\u205f', u'\u3000', u'\xA0', u'\u180E',
                        u'\u200A', u'\u202F', u'\u205F', '\r\n\r\n', '/', '**', '>>', '\\n\\t\\t', '\\n        ',
-                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ','$', '€']
+                       '\\n\\t  ', '&#x27;', '`', '&lt;', 'p&gt;', 'amp;', 'b&gt;', '&gt;', 'br ', '$', '€']
         for index in filter_list:
             input_text = input_text.replace(index, "").strip()
         return input_text
 
     def parse(self, response):
         """获取全部分类"""
-        category_urls = response.xpath('//li[@class="navPage-childList-item"]/a/@href').getall()
+        category_urls = ['https://desenio.com.au/au/posters-prints']
         for category_url in category_urls:
             yield scrapy.Request(url=category_url, callback=self.parse_list)
 
     def parse_list(self, response):
         """商品列表页"""
-        detail_url_list = response.xpath('//ul[@class="productGrid "]/li/a/@href').getall()
+        detail_url_list = response.xpath('//div[@class="relative text-center image v-middle-outer"]/a/@href').getall()
         for detail_url in detail_url_list:
             yield scrapy.Request(url=detail_url, callback=self.parse_detail)
-        next_page_url = response.xpath('//li[@class="pagination-item pagination-item--next"]/a/@href').get()
+        next_page_url = response.xpath('//a[text()="Next »"]/@href').get()
         if next_page_url:
             yield scrapy.Request(url=next_page_url, callback=self.parse_list)
 
@@ -127,20 +131,20 @@ class ThecrossdesignSpider(scrapy.Spider):
         items = ShopItem()
         items["url"] = response.url
 
-        items["current_price"] = self.price_fliter(response.xpath('//div[@class="BasicText Widget"]/text()').get())
-        price = response.xpath('//div[@class="BasicText lineThrough"]/text()').get()
+        items["current_price"] = self.price_fliter(response.xpath('//span[@class="lato currentPrice"]/text()').get())
+        price = response.xpath('//span[@class="lato"]/text()').get()
         items["original_price"] = self.price_fliter(price) if price else items["current_price"]
 
-        name = response.xpath('//h1[@class="productView-title"]/text()').get().strip()
+        name = response.xpath('//div[@id="tagAndTitle"]/h1/text()').get().strip()
         items["name"] = name
 
-        cat_list = response.xpath('//ul[@class="breadcrumbs"]/li/a/text()').getall()
+        cat_list = response.xpath('//div[@id="breadcrumbs"]/a/text()').getall()
         if cat_list:
             cat_list = [cat.strip() for cat in cat_list if cat.strip()]
             items["cat"] = cat_list[-1]
             items["detail_cat"] = '/'.join(cat_list)
 
-        description = response.xpath('//div[@id="productView_description"]').getall()
+        description = response.xpath('//span[@class="block medium-tiny-text spacing-top"]/text()').getall()
         items["description"] = self.filter_text(self.filter_html_label(' '.join(description)))
         items["source"] = self.allowed_domains[0]
 
@@ -151,11 +155,12 @@ class ThecrossdesignSpider(scrapy.Spider):
         #     attribute.append(attr1_list[a]+":"+attr2_list[a])
         # items["attributes"] = attribute
 
-        images_list = response.xpath('//ul[@class="productView-thumbnails"]/li/a/@href').getall()
+        images_list = response.xpath('//div[@id="productImages"]//li[1]//img/@src').getall()
+        images_list = [response.urljoin(url) for url in images_list]
         items["images"] = images_list
         items["brand"] = ''
 
-        opt_name = response.xpath('//div[@class="product-variants"]/div/span/text()').getall()
+        opt_name = response.xpath('//label[@for="chosenSize"]/text()').getall()
         if not opt_name:
             items["sku_list"] = []
             # return
@@ -164,14 +169,8 @@ class ThecrossdesignSpider(scrapy.Spider):
             opt_value = []
             # print(opt_name)
             opt_length = len(opt_name)
-            for i in range(opt_length):
-                value_temp = response.xpath('//div[@class="product-variants"]/div[' + str(
-                    i + 1) + ']/ul/li/label/span/text()').getall()
-                if not value_temp:
-                    value_temp = response.xpath('//div[@class="product-variants"]/div[' + str(
-                        i + 1) + ']/select[@class="form-control form-control-select"]/option/text()').getall()
-                if value_temp:
-                    opt_value.append(value_temp)
+            value_temp = response.xpath('//select[@id="chosenSize"]/option/text()').getall()
+            opt_value.append(value_temp)
 
             # print(opt_value)
             attrs_list = []
@@ -219,7 +218,7 @@ class ThecrossdesignSpider(scrapy.Spider):
         items["created"] = int(time.time())
         items["updated"] = int(time.time())
         items['is_deleted'] = 0
-        item_check.check_item(items)
+        # item_check.check_item(items)
         # detection_main(items = items,website = website,num=self.settings["CLOSESPIDER_ITEMCOUNT"],skulist=True,skulist_attributes=True)
-        print(items)
-        # yield items
+        # print(items)
+        yield items
